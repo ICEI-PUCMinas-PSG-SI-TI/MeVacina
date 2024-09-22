@@ -12,9 +12,9 @@ Trabalho Interdisciplinar - Aplicacões Web
 Os membros do grupo são: 
 - Felipe
 - Carolina
-- Mauro
+- Mauro Roberto Brasil Neto
 - Thiago
-- Rafael
+- Rafael Lage Batista
 - Vinicius
 
 > Inclua a lista dos membros da equipe com seus nomes completos.

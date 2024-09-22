@@ -1,17 +1,21 @@
 # Informações do Projeto
-`TÍTULO DO PROJETO`  
+`MeVacina`  
 
 Trabalho Interdisciplinar - Aplicacões Web
 
-`CURSO`
+`Sistema de Informação`
 
-`SEMESTRE`
+`1º PERIODO`
 
 ## Participantes
 
 Os membros do grupo são: 
-- Fulano da Silva
-- Ciclano Albuquerque
+- Felipe
+- Carolina
+- Mauro
+- Thiago
+- Rafael
+- Vinicius
 
 > Inclua a lista dos membros da equipe com seus nomes completos.
 

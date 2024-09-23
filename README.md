@@ -10,12 +10,12 @@ Trabalho Interdisciplinar - Aplicacões Web
 ## Participantes
 
 Os membros do grupo são: 
-- Felipe
-- Carolina
+- Felipe de Sousa Chaves
+- Carolina Torres Miglio
 - Mauro Roberto Brasil Neto
-- Thiago
+- Thiago Alexandre de Lelis Alves Gomes
 - Rafael Lage Batista
-- Vinicius
+- Vinicius Henrique Antônio Oliveira
 
 > Inclua a lista dos membros da equipe com seus nomes completos.
 

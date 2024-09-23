@@ -8,11 +8,9 @@
 
 ## Personas
 
-Pedro Paulo tem 26 anos, é arquiteto recém-formado e autônomo. Pensa em
-se desenvolver profissionalmente através de um mestrado fora do país,
-pois adora viajar, é solteiro e sempre quis fazer um intercâmbio. Está
-buscando uma agência que o ajude a encontrar universidades na Europa
-que aceitem alunos estrangeiros.
+Maria Cecília das Dores tem 58 anos, é cabelereira e manicure.
+Extrovertida e adora conversar. Maria possui um salão e tem um sonho de viajar para a Europa
+
 
 
 > Enumere e detalhe as personas da sua solução. Para
@@ -34,21 +32,11 @@ que aceitem alunos estrangeiros.
 
 Com base na análise das personas forma identificadas as seguintes histórias de usuários:
 
-|EU COMO... `PERSONA`| QUERO/PRECISO ... `FUNCIONALIDADE` |PARA ... `MOTIVO/VALOR`                 |
+|EU COMO... `Idoso`| QUERO/PRECISO ... `Saber quais vacinas tenho prioridade` |PARA ... `Me informar em quais grupos de risco me enquadro`                 |
 |--------------------|------------------------------------|----------------------------------------|
-|Usuário do sistema  | Registrar minhas tarefas           | Não esquecer de fazê-las               |
-|Administrador       | Alterar permissões                 | Permitir que possam administrar contas |
+|Criação de Cadastro  | Sistema de Notificações          | calendário vacinal              |
+|Função de Dependentes| Sistema de localização                | informações sobre as vacinas |
 
-> Apresente aqui as histórias de usuário que são relevantes para o
-> projeto de sua solução. As Histórias de Usuário consistem em uma
-> ferramenta poderosa para a compreensão e elicitação dos requisitos
-> funcionais e não funcionais da sua aplicação. Se possível, agrupe as
-> histórias de usuário por contexto, para facilitar consultas
-> recorrentes à essa parte do documento.
->
-> **Links Úteis**:
-> - [Histórias de usuários com exemplos e template](https://www.atlassian.com/br/agile/project-management/user-stories)
-> - [Como escrever boas histórias de usuário (User Stories)](https://medium.com/vertice/como-escrever-boas-users-stories-hist%C3%B3rias-de-usu%C3%A1rios-b29c75043fac)
 
 ## Requisitos
 
@@ -58,8 +46,23 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Permitir que o usuário cadastre tarefas | ALTA | 
-|RF-002| Emitir um relatório de tarefas no mês   | MÉDIA |
+|RF-001| Página da carteira de vacinação do
+usuário| ALTA | 
+|RF-002| Área de login  | ALTA |
+|RF-003| Sistema de login e senha | ALTA | 
+|RF-004|Banco de dados das informações dos
+usuários  | ALTA |
+|RF-005| informações sobre as vacinas | ALTA | 
+|RF-006| Calendário   | MÉDIA |
+|RF-007| Sistema de notificações | ALTA | 
+|RF-008|Opção de perfil secundário para
+menores de 18, PCD e usuários
+necessitados de cuidados | MÉDIA |
+|RF-009| Criação de usuários | ALTA | 
+|RF-010| Sistema de localização   | MÉDIA |
+|RF-011| Sistema de registro de unidades de
+saúde | ALTA | 
+|RF-012| Sistema de F.A.Q  | BAIXA |
 
 
 ### Requisitos não Funcionais
@@ -67,39 +70,7 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 |ID     | Descrição do Requisito  |Prioridade |
 |-------|-------------------------|----|
 |RNF-001| O sistema deve ser responsivo para rodar em um dispositivos móvel | MÉDIA | 
-|RNF-002| Deve processar requisições do usuário em no máximo 3s |  BAIXA | 
-
-> Com base nas Histórias de Usuário, enumere os requisitos da sua
-> solução. Classifique esses requisitos em dois grupos:
->
-> - [Requisitos Funcionais
->   (RF)](https://pt.wikipedia.org/wiki/Requisito_funcional):
->   correspondem a uma funcionalidade que deve estar presente na
->   plataforma (ex: cadastro de usuário).
->
-> - [Requisitos Não Funcionais
->   (RNF)](https://pt.wikipedia.org/wiki/Requisito_n%C3%A3o_funcional):
->   correspondem a uma característica técnica, seja de usabilidade,
->   desempenho, confiabilidade, segurança ou outro (ex: suporte a
->   dispositivos iOS e Android).
->
-> Lembre-se que cada requisito deve corresponder à uma e somente uma
-> característica alvo da sua solução. Além disso, certifique-se de que
-> todos os aspectos capturados nas Histórias de Usuário foram cobertos.
-
-## Restrições
-
-O projeto está restrito pelos itens apresentados na tabela a seguir.
-
-|ID| Restrição                                             |
-|--|-------------------------------------------------------|
-|01| O projeto deverá ser entregue até o final do semestre |
-|02| Não pode ser desenvolvido um módulo de backend        |
+|RNF-002| Ter acessibilidade | ALTA | 
+|RNF-003| Hospedagem 24 horas por dia |  ALTA| 
 
 
-> Enumere as restrições à sua solução. Lembre-se de que as restrições
-> geralmente limitam a solução candidata.
-> 
-> **Links Úteis**:
-> - [O que são Requisitos Funcionais e Requisitos Não Funcionais?](https://codificar.com.br/requisitos-funcionais-nao-funcionais/)
-> - [O que são requisitos funcionais e requisitos não funcionais?](https://analisederequisitos.com.br/requisitos-funcionais-e-requisitos-nao-funcionais-o-que-sao/)

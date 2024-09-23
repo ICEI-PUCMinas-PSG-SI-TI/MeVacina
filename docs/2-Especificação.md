@@ -29,22 +29,17 @@ As tabelas que se seguem apresentam os requisitos funcionais e não funcionais q
 
 |ID    | Descrição do Requisito  | Prioridade |
 |------|-----------------------------------------|----|
-|RF-001| Página da carteira de vacinação do
-usuário| ALTA | 
+|RF-001| Página da carteira de vacinação do usuário| ALTA | 
 |RF-002| Área de login  | ALTA |
 |RF-003| Sistema de login e senha | ALTA | 
-|RF-004|Banco de dados das informações dos
-usuários  | ALTA |
+|RF-004|Banco de dados das informações dos usuários  | ALTA |
 |RF-005| informações sobre as vacinas | ALTA | 
 |RF-006| Calendário   | MÉDIA |
 |RF-007| Sistema de notificações | ALTA | 
-|RF-008|Opção de perfil secundário para
-menores de 18, PCD e usuários
-necessitados de cuidados | MÉDIA |
+|RF-008|Opção de perfil secundário para necessitados de Cuidados | MÉDIA |
 |RF-009| Criação de usuários | ALTA | 
 |RF-010| Sistema de localização   | MÉDIA |
-|RF-011| Sistema de registro de unidades de
-saúde | ALTA | 
+|RF-011| Sistema de registro de unidades de saúde | ALTA | 
 |RF-012| Sistema de F.A.Q  | BAIXA |
 
 

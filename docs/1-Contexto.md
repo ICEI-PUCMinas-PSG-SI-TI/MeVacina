@@ -1,61 +1,21 @@
 # Introdução
+Nosso projeto de site MeVacina, é um cartão de vacinação online e um site informativo sobre doenças e vacinas, que tem como objetivo auxiliar o usuário a se lembrar de datas de campanhas de vacinação, mostrar a localização de postos de vacinação próximos e informar ao usuário sobre os diversos tipos de vacinas e as doenças que elas previnem.
 
 ## Problema
-> Nesse momento você deve apresentar o problema que a sua aplicação deve
-> resolver. No entanto, não é a hora de comentar sobre a aplicação.
-> Descreva também o contexto em que essa aplicação será usada, se
-> houver: empresa, tecnologias, etc. Novamente, descreva apenas o que de
-> fato existir, pois ainda não é a hora de apresentar requisitos
-> detalhados ou projetos.
->
-> Nesse momento, o grupo pode optar por fazer uso
-> de ferramentas como Design Thinking, que permite um olhar de ponta a
-> ponta para o problema.
->
-> **Links Úteis**:
-> - [Objetivos, Problema de pesquisa e Justificativa](https://medium.com/@versioparole/objetivos-problema-de-pesquisa-e-justificativa-c98c8233b9c3)
-> - [Matriz Certezas, Suposições e Dúvidas](https://medium.com/educa%C3%A7%C3%A3o-fora-da-caixa/matriz-certezas-suposi%C3%A7%C3%B5es-e-d%C3%BAvidas-fa2263633655)
-> - [Brainstorming](https://www.euax.com.br/2018/09/brainstorming/)
+> Cartões de vacinação são uma necessidade para todos os cidadãos, mas cartões físicos podem ser inconvenientes e até perdidos por acidente. Se manter informado sobre as datas de campanhas de vacinação e onde as vacinas podem ser encontradas representa outro problema no cotidiano agitado e atarefado em que as pessoas vivem.
+Outro aspecto importante é que a desinformação e medo das vacinas é um dos principais motivos pelos quais as pessoas não se vacinam*.
 
 ## Objetivos
 
-> Aqui você deve descrever os objetivos do trabalho indicando que o
-> objetivo geral é desenvolver um software para solucionar o problema
-> apresentado acima. Apresente também alguns (pelo menos 2) objetivos
-> específicos dependendo de onde você vai querer concentrar a sua
-> prática investigativa, ou como você vai aprofundar no seu trabalho.
-> 
-> **Links Úteis**:
-> - [Objetivo geral e objetivo específico: como fazer e quais verbos utilizar](https://blog.mettzer.com/diferenca-entre-objetivo-geral-e-objetivo-especifico/)
+> A internet tornou-se uma importante ferramenta ao longo dos últimos anos para a humanidade, seja na comunicação, no trabalho, no lazer ou até mesmo na propagação de informações a respeito da saúde. Então, por meio de nossa plataforma, visamos facilitar o aprendizado e a compreensão em relação as informações voltadas à vacinação. O ambiente virtual será favorável para uma consulta rápida e direta sobre as datas das campanhas, lembretes para uma nova dose, curiosidades sobre os imunizantes, além de um trabalho na questão da acessibilidade para abranger distintos grupos de usuários. Tudo isso será organizado em um site online, capaz de ser acessado por qualquer dispositivo conectado a uma rede. O nosso objetivo é tornar mais simplificado o processo de autocuidado para a população perante as vacinas, ajudando no monitoramento para não contrair possíveis/futuras enfermidades, ou também como, para manter-se em dia com seu quadro vacinal. 
 
 ## Justificativa
 
-> Descreva a importância ou a motivação para trabalhar com esta aplicação
-> que você escolheu. Indique as razões pelas quais você escolheu seus
-> objetivos específicos ou as razões para aprofundar em certos aspectos
-> do software.
-> 
-> O grupo de trabalho pode fazer uso de questionários, entrevistas e
-> dados estatísticos, que podem ser apresentados, com o objetivo de
-> esclarecer detalhes do problema que será abordado pelo grupo.
->
-> **Links Úteis**:
-> - [Como montar a justificativa](https://guiadamonografia.com.br/como-montar-justificativa-do-tcc/)
+> Mesmo que o site não substitua legalmente um cartão de vacinação oficial, ele torna mais simples e eficiente se manter atualizado com relação as campanhas de vacinação, se tornando mais conveniente para o usuário. O acesso à informação auxilia no combate à desinformação com relação as vacinas, agindo como um encorajamento para os usuários se manterem vacinados.
+O Brasil apresenta dados alarmantes em relação a taxa vacinal, pois observa-se que no país, em 2021, foi atingida a menor cobertura vacinal em 20 anos* e em 2023, não vacinados representam 75% das mortes por Covid-19*
+
 
 ## Público-Alvo
 
-> Descreva quem serão as pessoas que usarão a sua aplicação indicando os
-> diferentes perfis. O objetivo aqui não é definir quem serão os
-> clientes ou quais serão os papéis dos usuários na aplicação. A ideia
-> é, dentro do possível, conhecer um pouco mais sobre o perfil dos
-> usuários: conhecimentos prévios, relação com a tecnologia, relações
-> hierárquicas, etc.
->
-> Adicione informações sobre o público-alvo por meio de uma descrição
-> textual, ou diagramas de personas, mapa de stakeholders, ou como o
-> grupo achar mais conveniente.
-> 
-> **Links Úteis**:
-> - [Público-alvo: o que é, tipos, como definir seu público e exemplos](https://klickpages.com.br/blog/publico-alvo-o-que-e/)
-> - [Qual a diferença entre público-alvo e persona?](https://rockcontent.com/blog/diferenca-publico-alvo-e-persona/)
- 
+> O controle de doenças é fundamental para uma sociedade como um todo. Impedir a propagação de epidemias condiz com o bem-estar de todas as faixas etárias. Por sua vez, o público alvo é toda a população, isto é: adultos, idosos, crianças, adolescentes, bebês, pessoas com alguma deficiência física ou comorbidade - em suma são todos os indivíduos de uma população.
+

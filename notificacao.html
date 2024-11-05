@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface de Notificações</title>
+    <style>
+        /* Configurações gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #e7f0ff;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Barra lateral */
+        .sidebar {
+            width: 60px;
+            background-color: #a5c6ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            gap: 20px;
+        }
+
+        .sidebar-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #ff6666;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        /* Seção principal */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Cabeçalho da seção */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 1.5em;
+            color: #0020BF;
+        }
+
+        /* Área de notificações */
+        .notifications {
+            display: flex;
+            gap: 20px;
+            height: 100%;
+        }
+
+        /* Janela de Notificação Grande */
+        .notification-window {
+            flex: 2;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .notification-window h3 {
+            font-size: 1.2em;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .notification-window p {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        /* Lista de notificações */
+        .notification-list {
+            flex: 1;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .notification-list-item {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .notification-list-item h4 {
+            font-size: 1em;
+            color: #333;
+        }
+
+        .notification-list-item p {
+            font-size: 0.9em;
+            color: #777;
+        }
+
+        /* Ícone de Notificação */
+        .notification-icon {
+            width: 20px;
+            height: 20px;
+            background-color: #ff6666;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <!-- Barra lateral -->
+    <div class="sidebar">
+        <a href="index.html" ><img class="sidebar-icon" src="/img/botaohome.png" alt="Botão Home Page"></a>
+        <a href="notificacao.html" ><img class="sidebar-icon" src="/img/botaonotificacao.png" alt="Botão Home Page"></a>
+        <a><img class="sidebar-icon" src="/img/botaoconfiguser.png" alt="Botão de Configuração dos Perfis"></a>
+        <a><img class="sidebar-icon" src="/img/botaocalendario.png" alt="Botão Calendário"></a>
+        <a><img class="sidebar-icon" src="/img/botaosair.png" alt="Botão Sair"></a>
+    </div>
+
+    
+    <!-- Conteúdo principal -->
+    <div class="main-content">
+        <div class="header">Notificações</div>
+        
+        <div class="notifications">
+            <!-- Janela de Notificação Grande -->
+            <div class="notification-window" id="notification-window">
+                <h3>Notificação</h3>
+                <p>Selecione uma notificação para ver os detalhes.</p>
+            </div>
+
+            <!-- Lista de notificações -->
+            <div class="notification-list" id="notification-list">
+                <!-- As notificações serão carregadas aqui dinamicamente -->
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Função para buscar notificações da API
+        async function fetchNotifications() {
+          try {
+            const response = await fetch("http://localhost:3000/notifications");
+            const notifications = await response.json();
+            displayNotifications(notifications);
+          } catch (error) {
+            console.error("Erro ao buscar notificações:", error);
+          }
+        }
+  
+        // Função para exibir notificações na lista
+        function displayNotifications(notifications) {
+          const notificationList = document.getElementById("notification-list");
+          notificationList.innerHTML = ""; // Limpar lista de notificações
+  
+          notifications.forEach(notification => {
+            const listItem = document.createElement("div");
+            listItem.classList.add("notification-list-item");
+  
+            listItem.innerHTML = `
+              <div class="notification-icon"></div>
+              <div>
+                <h4>${notification.title}</h4>
+                <p>${notification.source}</p>
+              </div>
+            `;
+  
+            // Adiciona evento de clique para exibir a notificação completa
+            listItem.addEventListener("click", () => {
+              displayNotificationDetails(notification);
+            });
+  
+            notificationList.appendChild(listItem);
+          });
+        }
+  
+        // Função para exibir detalhes da notificação selecionada
+        function displayNotificationDetails(notification) {
+          const notificationWindow = document.getElementById("notification-window");
+          notificationWindow.innerHTML = `
+            <h3>${notification.title} - ${notification.source}</h3>
+            <p>${notification.content}</p>
+          `;
+        }
+  
+        // Carregar notificações ao carregar a página
+        window.onload = fetchNotifications;
+
+       
+      </script>
+    
+</body>
+</html>

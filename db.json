@@ -1,0 +1,29 @@
+{
+    "notifications": [
+      {
+        "id": 1,
+        "title": "Vacinação",
+        "content": "Nova dose disponível para agendamento.",
+        "source": "SUS Brasil"
+      },
+      {
+        "id": 2,
+        "title": "SUS Brasil",
+        "content": "Notificação de alerta sobre vacinação.",
+        "source": "SUS"
+      },
+      {
+        "id": 3,
+        "title": "Atualização de sistema",
+        "content": "O sistema será atualizado às 18:00.",
+        "source": "TI"
+      },
+      {
+        "id": 4,
+        "title": "Nova mensagem",
+        "content": "Verifique as novas orientações de saúde.",
+        "source": "Ministério da Saúde"
+      }
+    ]
+  }
+  

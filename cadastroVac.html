@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Vacinas</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        /* Configurações gerais */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #e7f0ff;
+            display: flex;
+            height: 100vh;
+        }
+
+        /* Barra lateral */
+        .sidebar {
+            width: 60px;
+            background-color: #a5c6ff;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 20px;
+            gap: 20px;
+        }
+
+        .sidebar-icon {
+            width: 40px;
+            height: 40px;
+            background-color: #ff6666;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
+
+        /* Conteúdo principal */
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        /* Cabeçalho */
+        header {
+            background-color: #a5c6ff;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        header p {
+            margin-top: 5px;
+            font-size: 1em;
+        }
+
+        /* Container do formulário */
+        .container {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            font-size: 1.2em;
+            color: #333;
+            margin-top: 15px;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #555;
+        }
+
+        select, input[type="date"], input[type="number"], button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        button {
+            background-color: #a5c6ff;
+            color: white;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Barra lateral -->
+<div class="sidebar">
+    <a href="index.html" ><img class="sidebar-icon" src="/img/botaohome.png" alt="Botão Home Page"></a>
+    <a href="notificacao.html" ><img class="sidebar-icon" src="/img/botaonotificacao.png" alt="Botão Notificação"></a>
+    <a><img class="sidebar-icon" src="/img/botaoconfiguser.png" alt="Botão de Configuração dos Perfis"></a>
+    <a><img class="sidebar-icon" src="/img/botaocalendario.png" alt="Botão Calendário"></a>
+    <a><img class="sidebar-icon" src="/img/botaosair.png" alt="Botão Sair"></a>
+</div>
+
+
+<!-- Conteúdo principal -->
+<div class="main-content">
+    <header>
+        <h1>Cadastro de Vacinas</h1>
+        <p>Preencha as informações abaixo para cadastrar sua vacina.</p>
+    </header>
+
+    <div class="container">
+        <h2>Etapa 1: Informações da Vacina</h2>
+        <form id="formCadastro" onsubmit="enviarCadastro(event)">
+            
+            <!-- Seletor de Grupo -->
+            <label for="grupo">Grupo</label>
+            <select id="grupo" name="grupo" required onchange="filtrarVacinasPorGrupo()">
+                <option value="">Selecione um grupo</option>
+            </select><br>
+
+            <!-- Seletor de Vacinas -->
+            <label for="vacina">Vacina</label>
+            <select id="vacina" name="vacina" required>
+                <option value="">Selecione uma vacina</option>
+            </select><br>
+
+            <!-- Outros campos -->
+            <label for="idade">Idade</label>
+            <input type="number" id="idade" name="idade" required><br>
+
+            <label for="dataPrimeiraDose">Data da Primeira Dose</label>
+            <input type="date" id="dataPrimeiraDose" name="dataPrimeiraDose" required><br>
+
+            <label for="diasProximaDose">Dias para Próxima Dose</label>
+            <input type="number" id="diasProximaDose" name="diasProximaDose" required><br>
+
+            <label for="dosesRestantes">Doses Restantes</label>
+            <input type="number" id="dosesRestantes" name="dosesRestantes" required><br>
+
+            <button type="submit">Cadastrar Vacina</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <h2>Vacinas Registradas</h2>
+        <button onclick="mostrarVacinas()">Quais as Vacinas</button>
+        <button onclick="mostrarVacinasTomadas()">Vacinas Tomadas</button>
+        <div id="resultado"></div>
+    </div>
+</div>
+
+<script>
+    // Função para carregar dados do arquivo JSON
+    async function carregarDados() {
+        const response = await fetch("db.json");
+        const data = await response.json();
+        return data.vacinas; // Adapte para a estrutura do seu JSON
+    }
+
+    // Função para carregar os grupos dinamicamente do db.json
+    async function carregarGruposSelect() {
+        const vacinas = await carregarDados();
+        const grupos = [...new Set(vacinas.map(vacina => vacina.grupo))]; // Extrai grupos únicos
+
+        const selectGrupo = document.getElementById("grupo");
+
+        // Limpa as opções de grupos
+        selectGrupo.innerHTML = "<option value=''>Selecione um grupo</option>";
+
+        // Adiciona cada grupo encontrado no select
+        grupos.forEach(grupo => {
+            const option = document.createElement("option");
+            option.value = grupo;
+            option.textContent = grupo.charAt(0).toUpperCase() + grupo.slice(1); // Capitaliza a primeira letra
+            selectGrupo.appendChild(option);
+        });
+    }
+
+    // Função para carregar vacinas registradas na seleção do formulário
+    async function carregarVacinasSelect() {
+        const vacinas = await carregarDados();
+        const selectVacina = document.getElementById("vacina");
+
+        vacinas.forEach(vacina => {
+            const option = document.createElement("option");
+            option.value = vacina.vacina;
+            option.textContent = `${vacina.vacina} - ${vacina.dose} doses`; // Exibe a quantidade de doses
+            selectVacina.appendChild(option);
+        });
+    }
+
+    // Função para filtrar vacinas de acordo com o grupo selecionado
+    async function filtrarVacinasPorGrupo() {
+        const grupo = document.getElementById("grupo").value;
+        const vacinas = await carregarDados();
+        const selectVacina = document.getElementById("vacina");
+
+        // Limpa as opções de vacinas
+        selectVacina.innerHTML = "<option value=''>Selecione uma vacina</option>";
+
+        // Filtra as vacinas de acordo com o grupo
+        const vacinasFiltradas = vacinas.filter(vacina => vacina.grupo === grupo);
+
+        // Preenche o campo de vacina com as vacinas filtradas
+        vacinasFiltradas.forEach(vacina => {
+            const option = document.createElement("option");
+            option.value = vacina.vacina;
+            option.textContent = `${vacina.vacina} - ${vacina.dose} doses`; // Exibe a quantidade de doses
+            selectVacina.appendChild(option);
+        });
+    }
+
+    // Função para mostrar todas as vacinas
+    async function mostrarVacinas() {
+        const vacinas = await carregarDados();
+        document.getElementById("resultado").innerHTML = vacinas.map(vacina => ` 
+            <p>Vacina: ${vacina.vacina} - Grupo: ${vacina.grupo} - Doses: ${vacina.doses}</p>
+        `).join("");
+    }
+
+    // Função para mostrar vacinas tomadas
+    async function mostrarVacinasTomadas() {
+        const vacinas = await carregarDados();
+        const vacinasTomadas = vacinas.filter(vacina => vacina.dataPrimeiraDose); // Ajuste conforme o JSON
+        document.getElementById("resultado").innerHTML = vacinasTomadas.map(vacina => `
+            <p>Vacina: ${vacina.vacina} - Data Primeira Dose: ${vacina.dataPrimeiraDose} - Doses Restantes: ${vacina.dosesRestantes}</p>
+        `).join("");
+    }
+
+    // Função para enviar os dados de cadastro
+    async function enviarCadastro(event) {
+        event.preventDefault();
+
+        // Captura os dados do formulário
+        const vacina = document.getElementById("vacina").value;
+        const idade = document.getElementById("idade").value;
+        const dataPrimeiraDose = document.getElementById("dataPrimeiraDose").value;
+        const diasProximaDose = document.getElementById("diasProximaDose").value;
+        const dosesRestantes = document.getElementById("dosesRestantes").value;
+
+        // Estrutura de dados a ser enviada para o banco (simulado como JSON)
+        const novoCadastro = {
+            vacina: vacina,
+            idade: idade,
+            dataPrimeiraDose: dataPrimeiraDose,
+            diasProximaDose: diasProximaDose,
+            dosesRestantes: dosesRestantes
+        };
+
+        // Envia para o "banco de dados" (simulado com db.json)
+        const response = await fetch("db.json", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({vacinas: [novoCadastro]})
+        });
+
+        if (response.ok) {
+            alert("Vacina cadastrada com sucesso!");
+            document.getElementById("formCadastro").reset(); // Limpa o formulário
+        } else {
+            alert("Erro ao cadastrar vacina.");
+        }
+    }
+
+    // Carrega os grupos e vacinas no carregamento da página
+    window.onload = async () => {
+        await carregarGruposSelect();  // Carrega os grupos no campo select
+        await carregarVacinasSelect(); // Carrega as vacinas na seleção
+    };
+</script>
+
+</body>
+</html>

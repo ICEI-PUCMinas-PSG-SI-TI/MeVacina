@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calendário de Vacinação</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    .vacina-container { margin-bottom: 20px; }
+    .vacina-container h2 { color: #0073e6; }
+  </style>
+</head>
+<body>
+  <h1>Calendário de Vacinação</h1>
+  
+  <div id="vacinaContainer"></div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const vacinas = [
+    { grupo: "Criança", vacina: "BCG", dose: "Única", idade: "Ao nascer" },
+    { grupo: "Adolescente", vacina: "HPV", dose: "2 doses", idade: "11 a 14 anos" },
+    { grupo: "Adulto", vacina: "Hepatite B", dose: "3 doses", idade: "Qualquer idade" },
+    { grupo: "Idoso", vacina: "Influenza", dose: "Anual", idade: "Acima de 60 anos" },
+    { grupo: "Gestante", vacina: "dTpa", dose: "Única a cada gestação", idade: "A partir da 20ª semana" }
+  ];
+
+  const vacinaContainer = document.getElementById('vacinaContainer');
+
+  vacinas.forEach(vacina => {
+    const vacinaDiv = document.createElement('div');
+    vacinaDiv.classList.add('vacina-container');
+
+    vacinaDiv.innerHTML = `
+      <h2>${vacina.grupo}</h2>
+      <p><strong>Vacina:</strong> ${vacina.vacina}</p>
+      <p><strong>Dose:</strong> ${vacina.dose}</p>
+      <p><strong>Idade:</strong> ${vacina.idade}</p>
+    `;
+
+    vacinaContainer.appendChild(vacinaDiv);
+  });
+});
+
+  </script>
+</body>
+</html>

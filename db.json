@@ -1,78 +1,246 @@
 {
-  
   "notifications": [
     {
       "id": "1",
-      "idPaciente":"pc01",
+      "idPaciente": "pc01",
       "titulo": "Vacinação",
       "content": "Nova dose disponível para agendamento.",
       "source": "SUS Brasil"
     },
     {
       "id": "2",
-      "idPaciente":"pc01",
+      "idPaciente": "pc01",
       "titulo": "SUS Brasil",
       "content": "Notificação de alerta sobre vacinação.",
       "source": "SUS"
     },
     {
       "id": "3",
-      "idPaciente":"pc03",
+      "idPaciente": "pc03",
       "titulo": "Atualização de sistema",
       "content": "O sistema será atualizado às 18:00.",
       "source": "TI"
     },
     {
       "id": "4",
-      "idPaciente":"pc04",
+      "idPaciente": "pc04",
       "titulo": "Nova mensagem",
       "content": "Verifique as novas orientações de saúde.",
       "source": "Ministério da Saúde"
     },
     {
       "id": "db02",
-      "idPaciente":"pc04",
+      "idPaciente": "pc04",
       "titulo": "Vacinação da COVID19",
       "content": "Nova dose disponível para agendamento.",
       "source": "SUS BH"
     }
   ],
-
-    "vacinas": [
-      { "grupo": "Criança", "vacina": "BCG", "dose": 1, "idade": "Ao nascer" },
-      { "grupo": "Criança", "vacina": "Hepatite B", "dose": "Recombinante HB", "idade": "Ao nascer" },
-      { "grupo": "Criança", "vacina": "Penta", "dose": 3, "idade": "2 a 6 meses" },
-      { "grupo": "Criança", "vacina": "VIP", "dose": 3, "idade": "2 a 6 meses" },
-      { "grupo": "Criança", "vacina": "Pneumo 10", "dose": 3, "idade": "2 a 12 meses" },
-      { "grupo": "Criança", "vacina": "Rotavírus", "dose": 2, "idade": "2 a 4 meses" },
-      { "grupo": "Criança", "vacina": "Meningo C", "dose": 2, "idade": "3 a 5 meses" },
-      { "grupo": "Criança", "vacina": "Covid-19", "dose": 2, "idade": "6 a 7 meses" },
-      { "grupo": "Criança", "vacina": "Febre Amarela", "dose": 2, "idade": "9 meses a 5 anos" },
-      { "grupo": "Criança", "vacina": "Tríplice viral", "dose": 2, "idade": "12 meses a 4 anos" },
-      { "grupo": "Criança", "vacina": "DTP", "dose": 3, "idade": "15 meses a 4 anos" },
-      { "grupo": "Criança", "vacina": "VOPb", "dose": 2, "idade": "15 meses a 4 anos" },
-      { "grupo": "Criança", "vacina": "Varicela", "dose": 1, "idade": "4 anos" },
-      { "grupo": "Indígena", "vacina": "Pneumo 23", "dose": 2, "idade": "5 anos (população indígena)" },
-      { "grupo": "Adolescente", "vacina": "Hepatite B", "dose": 3, "idade": "A qualquer tempo" },
-      { "grupo": "Adolescente", "vacina": "Difteria e Tétano (dT)", "dose": 3, "idade": "A qualquer tempo" },
-      { "grupo": "Adolescente", "vacina": "Febre Amarela (VFA)", "dose": 1, "idade": "A qualquer tempo" },
-      { "grupo": "Adolescente", "vacina": "Tríplice viral", "dose": 2, "idade": "A qualquer tempo" },
-      { "grupo": "Adolescente", "vacina": "HPV", "dose": 1, "idade": "11 a 14 anos" },
-      { "grupo": "Adolescente", "vacina": "MenACWY", "dose": 1, "idade": "11 a 14 anos" },
-      { "grupo": "Adulto", "vacina": "Hepatite B", "dose": 3, "idade": "A qualquer tempo" },
-      { "grupo": "Adulto", "vacina": "Difteria e Tétano (dT)", "dose": 3, "idade": "A qualquer tempo" },
-      { "grupo": "Adulto", "vacina": "Febre Amarela (VFA)", "dose": 1, "idade": "A qualquer tempo" },
-      { "grupo": "Adulto", "vacina": "HPV", "dose": 1, "idade": "A qualquer tempo" },
-      { "grupo": "Adulto", "vacina": "dTpa", "dose": 1, "idade": "A partir de 18 anos" },
-      { "grupo": "Adulto", "vacina": "Tríplice viral", "dose": 2, "idade": "20 a 59 anos" },
-      { "grupo": "Idoso", "vacina": "Hepatite B", "dose": 3, "idade": "A partir de 60 anos" },
-      { "grupo": "Idoso", "vacina": "Difteria e Tétano (dT)", "dose": 3, "idade": "A partir de 60 anos" },
-      { "grupo": "Idoso", "vacina": "Febre Amarela (VFA)", "dose": 1, "idade": "A partir de 60 anos" },
-      { "grupo": "Idoso", "vacina": "dTpa", "dose": 1, "idade": "A partir de 60 anos" },
-      { "grupo": "Gestante", "vacina": "Hepatite B", "dose": 3, "idade": "A qualquer tempo no pré-natal" },
-      { "grupo": "Gestante", "vacina": "Difteria e Tétano (dT)", "dose": 3, "idade": "A qualquer tempo no pré-natal" },
-      { "grupo": "Gestante", "vacina": "dTpa", "dose":1 }
-    ]
-  
-
+  "vacinas": [
+    {
+      "grupo": "Criança",
+      "vacina": "BCG",
+      "dose": 1,
+      "idade": "Ao nascer"
+    },
+    {
+      "grupo": "Criança",
+      "vacina": "Hepatite B",
+      "dose": "Recombinante HB",
+      "idade": "Ao nascer"
+    },
+    {
+      "grupo": "Criança",
+      "vacina": "Penta",
+      "dose": 3,
+      "idade": "2 a 6 meses"
+    },
+    {
+      "grupo": "Criança",
+      "vacina": "VIP",
+      "dose": 3,
+      "idade": "2 a 6 meses"
+    },
+    {
+      "grupo": "Criança",
+      "vacina": "Pneumo 10",
+      "dose": 3,
+      "idade": "2 a 12 meses"
+    },
+    {
+      "grupo": "Criança",
+      "vacina": "Rotavírus",
+      "dose": 2,
+      "idade": "2 a 4 meses"
+    },
+    {
+      "grupo": "Criança",
+      "vacina": "Meningo C",
+      "dose": 2,
+      "idade": "3 a 5 meses"
+    },
+    {
+      "grupo": "Criança",
+      "vacina": "Covid-19",
+      "dose": 2,
+      "idade": "6 a 7 meses"
+    },
+    {
+      "grupo": "Criança",
+      "vacina": "Febre Amarela",
+      "dose": 2,
+      "idade": "9 meses a 5 anos"
+    },
+    {
+      "grupo": "Criança",
+      "vacina": "Tríplice viral",
+      "dose": 2,
+      "idade": "12 meses a 4 anos"
+    },
+    {
+      "grupo": "Criança",
+      "vacina": "DTP",
+      "dose": 3,
+      "idade": "15 meses a 4 anos"
+    },
+    {
+      "grupo": "Criança",
+      "vacina": "VOPb",
+      "dose": 2,
+      "idade": "15 meses a 4 anos"
+    },
+    {
+      "grupo": "Criança",
+      "vacina": "Varicela",
+      "dose": 1,
+      "idade": "4 anos"
+    },
+    {
+      "grupo": "Indígena",
+      "vacina": "Pneumo 23",
+      "dose": 2,
+      "idade": "5 anos (população indígena)"
+    },
+    {
+      "grupo": "Adolescente",
+      "vacina": "Hepatite B",
+      "dose": 3,
+      "idade": "A qualquer tempo"
+    },
+    {
+      "grupo": "Adolescente",
+      "vacina": "Difteria e Tétano (dT)",
+      "dose": 3,
+      "idade": "A qualquer tempo"
+    },
+    {
+      "grupo": "Adolescente",
+      "vacina": "Febre Amarela (VFA)",
+      "dose": 1,
+      "idade": "A qualquer tempo"
+    },
+    {
+      "grupo": "Adolescente",
+      "vacina": "Tríplice viral",
+      "dose": 2,
+      "idade": "A qualquer tempo"
+    },
+    {
+      "grupo": "Adolescente",
+      "vacina": "HPV",
+      "dose": 1,
+      "idade": "11 a 14 anos"
+    },
+    {
+      "grupo": "Adolescente",
+      "vacina": "MenACWY",
+      "dose": 1,
+      "idade": "11 a 14 anos"
+    },
+    {
+      "grupo": "Adulto",
+      "vacina": "Hepatite B",
+      "dose": 3,
+      "idade": "A qualquer tempo"
+    },
+    {
+      "grupo": "Adulto",
+      "vacina": "Difteria e Tétano (dT)",
+      "dose": 3,
+      "idade": "A qualquer tempo"
+    },
+    {
+      "grupo": "Adulto",
+      "vacina": "Febre Amarela (VFA)",
+      "dose": 1,
+      "idade": "A qualquer tempo"
+    },
+    {
+      "grupo": "Adulto",
+      "vacina": "HPV",
+      "dose": 1,
+      "idade": "A qualquer tempo"
+    },
+    {
+      "grupo": "Adulto",
+      "vacina": "dTpa",
+      "dose": 1,
+      "idade": "A partir de 18 anos"
+    },
+    {
+      "grupo": "Adulto",
+      "vacina": "Tríplice viral",
+      "dose": 2,
+      "idade": "20 a 59 anos"
+    },
+    {
+      "grupo": "Idoso",
+      "vacina": "Hepatite B",
+      "dose": 3,
+      "idade": "A partir de 60 anos"
+    },
+    {
+      "grupo": "Idoso",
+      "vacina": "Difteria e Tétano (dT)",
+      "dose": 3,
+      "idade": "A partir de 60 anos"
+    },
+    {
+      "grupo": "Idoso",
+      "vacina": "Febre Amarela (VFA)",
+      "dose": 1,
+      "idade": "A partir de 60 anos"
+    },
+    {
+      "grupo": "Idoso",
+      "vacina": "dTpa",
+      "dose": 1,
+      "idade": "A partir de 60 anos"
+    },
+    {
+      "grupo": "Gestante",
+      "vacina": "Hepatite B",
+      "dose": 3,
+      "idade": "A qualquer tempo no pré-natal"
+    },
+    {
+      "grupo": "Gestante",
+      "vacina": "Difteria e Tétano (dT)",
+      "dose": 3,
+      "idade": "A qualquer tempo no pré-natal"
+    },
+    {
+      "grupo": "Gestante",
+      "vacina": "dTpa",
+      "dose": 1
+    },
+    {
+      "id": "1844",
+      "vacina": "Pneumo 23",
+      "idade": 7,
+      "dataPrimeiraDose": "2024-11-19",
+      "diasProximaDose": 10,
+      "dosesRestantes": 1
+    }
+  ]
 }

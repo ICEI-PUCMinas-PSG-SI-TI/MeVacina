@@ -1,0 +1,158 @@
+/* Configurações gerais */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #e7f0ff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Barra lateral */
+.sidebar {
+    width: 60px;
+    background-color: #a5c6ff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    gap: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+}
+
+.sidebar-icon {
+    width: 40px;
+    height: 40px;
+    background-color: #ff6666;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+/* Conteúdo principal */
+.main-content {
+    flex: 1;
+    margin-left: 80px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #a5c6ff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+header p {
+    margin-top: 5px;
+    font-size: 1em;
+}
+
+/* Container do formulário */
+.container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin-top: 15px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #555;
+}
+
+select, input[type="date"], input[type="number"], button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: #a5c6ff;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .sidebar {
+        flex-direction: row;
+        justify-content: space-around;
+        width: 100%;
+        height: 60px;
+        padding-top: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+    }
+
+    .main-content {
+        margin: 80px 10px 10px 10px;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 10px;
+    }
+
+    header {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header p {
+        font-size: 0.9em;
+    }
+
+    select, input[type="date"], input[type="number"], button {
+        padding: 8px;
+        font-size: 0.9em;
+    }
+
+    button {
+        font-size: 0.9em;
+    }
+}

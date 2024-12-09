@@ -1,0 +1,27 @@
+{
+    "vacinas": [
+      {
+        "id": 1,
+        "nome": "Febre Amarela",
+        "aplicacoes": [
+          { "data": "2024-12-01", "local": "Clínica Central" },
+          { "data": "2024-12-15", "local": "Posto de Saúde da Vila" }
+        ]
+      },
+      {
+        "id": 2,
+        "nome": "Gripe",
+        "aplicacoes": [
+          { "data": "2024-11-20", "local": "Hospital Municipal" }
+        ]
+      },
+      {
+        "id": 3,
+        "nome": "Sarampo",
+        "aplicacoes": [
+          { "data": "2024-11-30", "local": "Posto de Saúde do Centro" }
+        ]
+      }
+    ]
+  }
+  

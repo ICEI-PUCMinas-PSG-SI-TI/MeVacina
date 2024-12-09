@@ -1,0 +1,35 @@
+{
+    "vacinas": [
+      {
+        "id": 1,
+        "nome": "Febre Amarela",
+        "data_campanha": "2024-06-01",
+        "locais": [
+          "Posto de Saúde Central",
+          "Clínica Municipal",
+          "Hospital Regional"
+        ]
+      },
+      {
+        "id": 2,
+        "nome": "Gripe",
+        "data_campanha": "2024-04-15",
+        "locais": [
+          "Unidade Básica de Saúde 1",
+          "Posto de Saúde da Família",
+          "Clínica de Imunização"
+        ]
+      },
+      {
+        "id": 3,
+        "nome": "Sarampo",
+        "data_campanha": "2024-08-20",
+        "locais": [
+          "Hospital São João",
+          "Posto de Vacinação Municipal",
+          "Clínica de Saúde Infantojuvenil"
+        ]
+      }
+    ]
+  }
+  

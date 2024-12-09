@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Vacinação</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <nav class="align-items-center L_hide_mobile menu-toggle vw-100 vh-100 p-0 position-fixed">
+        <div class="position-relative">
+            <button class="navbar-toggler" type="button" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="./img/menu-bar.png" alt="Ícone Menu">
+            </button>
+            <div class="collapse navbar-collapse vw-100 vh-100" id="navbarTogglerDemo01">
+                <div class="icons d-flex justify-content-between align-items-center gap-3">
+                    <img class="" src="./img/botaohome.png" alt="Botão Home Page">
+                    <img class="" src="./img/botaonotificacao.png" alt="Botão Notificação">
+                    <img class="" src="./img/botaoconfiguser.png" alt="Botão Configuração">
+                    <img class="" src="./img/botaocalendario.png" alt="Botão Calendário">
+                    <img class="" src="./img/botaosair.png" alt="Botão Sair">
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container-fluid p-4">
+        <div class="container-fluid p-4">
+            <div class="row vh-100">
+                <aside class="col-lg-1 bg-sidebar d-flex flex-column justify-content-between align-items-center p-3">
+                    <div class="top-icons d-flex flex-column align-items-center gap-3">
+                        <img class="btnhome botaosidebar" src="./img/botaohome.png" alt="Botão Home Page">
+                        <img class="botaosidebar" src="./img/botaonotificacao.png" alt="Botão Notificação">
+                        <img class="botaosidebar" src="./img/botaoconfiguser.png" alt="Botão Configuração">
+                        <img class="botaosidebar btncalendario" src="./img/botaocalendario.png" alt="Botão Calendário">
+                    </div>
+                    <div class="bottom-icon">
+                        <img class="botaosidebar" src="./img/botaosair.png" alt="Botão Sair">
+                    </div>
+                </aside>
+
+                <!-- Conteúdo Principal - COMEÇA AQUI-->
+                <main class="col-md-8 p-4">
+                    <header class="d-flex justify-content-between align-items-center mb-4 flex-wrap descertit">
+                        <div>
+                            <h1 class="fw-semibold">Meu Perfil</h1>
+                            <p class="text-muted data-atual">Sexta-Feira, 04 de Out. 2024</p>
+                        </div>
+                        <div>
+                            <a href="#" class="text-end fw-semibold gerenciarVacinas">Gerenciar Vacinas</a>
+                            <button class="btn btnaddVacinas fw-semibold">Add+ Vacina</button>
+                        </div>
+                    </header>
+
+                    <section
+                        class="bg-info px-5 text-white d-flex justify-content-center align-items-center flex-wrap-reverse mb-4 imgbv">
+                        <div>
+                            <h2 class="fw-semibold text-center boasVindastexto">Bem-Vindo, <span
+                                    id="nomeUser-principal">[Nome da Pessoa]</span></h2>
+                            <p class="text-center fw-semibold perguntaBV">Como anda seu calendário vacinal?</p>
+                        </div>
+                        <!-- Avatar do Boas-Vindas -->
+                        <img src="./img/avatar1.png" alt="Avatar do Perfil" class="avatar-boasVindas"
+                            id="avatar-boasVindas">
+                    </section>
+
+                    <section class="row text-center d-flex justify-content-between mb-4">
+                        <div class="col-xl-2 cardgapcel">
+                            <div class="card shadow-sm h-100">
+                                <a href="VacinasTomadas.html" target="_blank">
+                                   <img src="./img/cardvacinatomadas.png" class="card-img-top cardvacinasMain mt-3" alt="...">
+                                </a>
+                                <p class="text-muted fw-semibold tituloCardVacinal p-2">Vacinas Tomadas</p>
+                                <h4 class="fw-bold mb-5 subtituloCardVacinal">23</h4>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 cardgapcel">
+                            <div class="card shadow-sm h-100">
+                                <a href="ProximasDoses.html" target="_blank">
+                                    <img src="./img/cardproxdoses.png" class="card-img-top cardvacinasMain mt-3" alt="...">
+                                </a>
+                                <p class="text-muted fw-semibold tituloCardVacinal p-2">Próximas Doses</p>
+                                <h4 class="fw-bold mb-5 subtituloCardVacinal">4</h4>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 cardgapcel">
+                            <div class="card shadow-sm h-100">
+                                <img src="./img/cardsugeridas.png" class="card-img-top cardvacinasMain mt-3" alt="...">
+                                <p class="text-muted fw-semibold tituloCardVacinal p-2">Sugeridas</p>
+                                <h4 class="fw-bold mb-5 subtituloCardVacinal">16</h4>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 cardgapcel">
+                            <div class="card shadow-sm h-100">
+                                <img src="./img/cardlembretes.png" class="card-img-top cardvacinasMain mt-3" alt="...">
+                                <p class="text-muted  fw-semibold tituloCardVacinal t-2">Lembretes Agendados</p>
+                                <h4 class="fw-bold mb-5 subtituloCardVacinal">5</h4>
+                            </div>
+                        </div>
+                        <div class="col-xl-2 cardgapcel">
+                            <div class="card shadow-sm h-100">
+                                <a href="Localizador.html" target="_blank">
+                                    <img src="./img/cardcep.png" class="card-img-top cardvacinasMain mt-3" alt="Localizar Unidades de Saúde">
+                                </a>
+                                <p class="text-muted fw-semibold tituloCardVacinal p-2">Localizar Unidades de Saúde em outro CEP</p>
+                            </div>
+                        </div>
+                        
+                    </section>
+                    <!-- Calendário Vacinal | Deve ser Ajustado pelo Rafael, fiz uma base -->
+                    <section class="bg-white p-4 rounded shadow-sm">
+                        <h3 class="text-center tituloCalendarioVacinal fw-semibold">Calendário Vacinal</h3>
+                        <p class="text-center mesAnoCalendario">Outubro 2024</p>
+                        <div class="d-flex justify-content-center flex-wrap gap-2 align-items-center px-4">
+                            <div class="text-center">
+                                <p>Seg 04</p>
+                                <span class="badge bg-success p-2 text-wrap">Vacina tomada: Febre Amarela</span>
+                            </div>
+                            <div class="text-center">
+                                <p>Qua 06</p>
+                                <span class="badge bg-primary p-2 text-wrap">Próxima Dose: COVID-19</span>
+                            </div>
+                            <div class="text-center">
+                                <p>Sex 08</p>
+                                <span class="badge bg-warning text-dark p-2 text-wrap">Sugerida: Campanha contra
+                                    Gripe</span>
+                            </div>
+                        </div>
+                    </section>
+                </main>
+
+                <!-- Sidebar de Perfil -->
+                <aside class="col-md-3 bg-light p-4 profile-sidebar">
+                    <div class="mb-4">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <h3 class="col-xl-6 text-start fw-bold p-4 tituloSidebar-Perfil">Perfil</h3>
+                                <div class="col-xl-6 d-flex justify-content-end align-items-center">
+                                    <img class="botaonotificacaoSidebar" src="./img/sinonotifica.png"
+                                        alt="Botão Notificação">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Moldura e Avatar -->
+                        <div class="position-relative text-center">
+                            <!-- Moldura -->
+                            <div class="moldura-avatar">
+                                <img src="./img/moldura.png" alt="Moldura" class="img-fluid moldura"
+                                    class="rounded-circle avatarSidebar">
+                            </div>
+                            <!-- Avatar -->
+                            <div class="foto-avatar position-absolute top-50 start-50 translate-middle">
+                                <img src="./img/avatar1.png" alt="Avatar do Usuário"
+                                    class="rounded-circle avatarSidebar">
+                            </div>
+                        </div>
+                        <div class="d-flex justify-content-end align-items-center">
+                            <img class="botaonotificacaoSidebar mb-5" src="./img/botaomodifavatar.png"
+                                alt="Botão Notificação" data-bs-toggle="modal" data-bs-target="#avatarModal">
+                        </div>
+                        <h3 class="text-center fw-bold" id="nomeUser-Sidebar">[Nome do Usuário]</h3>
+                    </div>
+
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col-xl-6">
+                                <h4 class="mb-4 pt-5 fw-semibold tituloPerfisVinc">Perfis Vinculados</h4>
+                            </div>
+                            <div class="col-xl-3"></div>
+                            <div class="col-xl-3 mb-4 pt-5">
+                                <a href="login.html" class="addConta-Sidebar fw-semibold" data-bs-toggle="modal"
+                                    data-bs-target="#exampleModal">Add+ Conta</a>
+                            </div>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled" id="gerenciarUsuarios">
+                    </ul>
+                    <div class="d-grid gap-2 col-xl-6 mx-auto">
+                        <button class="btn botaoGerenciarContas fw-semibold" type="button">Gerenciar Contas</button>
+                    </div>
+                </aside>
+            </div>
+
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Adicionar Perfil Vinculado</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label for="username" class="text-info">Usuário</label><br>
+                                <input type="text" name="username" id="username" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="password" class="text-info">Senha</label><br>
+                                <input type="text" name="password" id="password" class="form-control">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="age" class="text-info">Idade</label><br>
+                                <input type="number" name="age" id="age" class="form-control">
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="button" class="btn btn-primary"
+                                onclick="adicionarPerfil2()">Adicionar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Modal de Escolha de Avatar -->
+            <div class="modal fade" id="avatarModal" tabindex="-1" aria-labelledby="avatarModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                    <div class="modal-content modal-fundo">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="avatarModalLabel">Escolha seu Avatar</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Fechar"></button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="d-flex flex-wrap justify-content-center gap-3">
+                                <!-- Avatares disponíveis -->
+                                <img src="./img/avatar1.png" alt="Avatar 1" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar1.png')">
+                                <img src="./img/avatar2.png" alt="Avatar 2" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar2.png')">
+                                <img src="./img/avatar3.png" alt="Avatar 3" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar3.png')">
+                                <img src="./img/avatar4.png" alt="Avatar 4" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar4.png')">
+                                <img src="./img/avatar5.png" alt="Avatar 5" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar5.png')">
+                                <img src="./img/avatar6.png" alt="Avatar 6" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar6.png')">
+                                <img src="./img/avatar7.png" alt="Avatar 7" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar7.png')">
+                                <img src="./img/avatar8.png" alt="Avatar 8" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar8.png')">
+                                <img src="./img/avatar9.png" alt="Avatar 9" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar9.png')">
+                                <img src="./img/avatar10.png" alt="Avatar 10" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar10.png')">
+                                <img src="./img/avatar11.png" alt="Avatar 11" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar11.png')">
+                                <img src="./img/avatar12.png" alt="Avatar 12" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar12.png')">
+                                <img src="./img/avatar13.png" alt="Avatar 13" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar13.png')">
+                                <img src="./img/avatar14.png" alt="Avatar 14" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar14.png')">
+                                <img src="./img/avatar15.png" alt="Avatar 15" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar15.png')">
+                                <img src="./img/avatar16.png" alt="Avatar 16" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar16.png')">
+                                <img src="./img/avatar17.png" alt="Avatar 17" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar17.png')">
+                                <img src="./img/avatar18.png" alt="Avatar 18" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar18.png')">
+                                <img src="./img/avatar19.png" alt="Avatar 19" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar19.png')">
+                                <img src="./img/avatar20.png" alt="Avatar 20" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar20.png')">
+                                <img src="./img/avatar21.png" alt="Avatar 21" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar21.png')">
+                                <img src="./img/avatar22.png" alt="Avatar 22" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar22.png')">
+                                <img src="./img/avatar23.png" alt="Avatar 23" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar23.png')">
+                                <img src="./img/avatar24.png" alt="Avatar 24" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar24.png')">
+                                <img src="./img/avatar25.png" alt="Avatar 25" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar25.png')">
+                                <img src="./img/avatar26.png" alt="Avatar 26" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar26.png')">
+                                <img src="./img/avatar27.png" alt="Avatar 27" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar27.png')">
+                                <img src="./img/avatar28.png" alt="Avatar 28" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar28.png')">
+                                <img src="./img/avatar29.png" alt="Avatar 29" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar29.png')">
+                                <img src="./img/avatar30.png" alt="Avatar 30" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar30.png')">
+                                <img src="./img/avatar31.png" alt="Avatar 31" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar31.png')">
+                                <img src="./img/avatar32.png" alt="Avatar 32" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar32.png')">
+                                <img src="./img/avatar33.png" alt="Avatar 33" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar33.png')">
+                                <img src="./img/avatar34.png" alt="Avatar 34" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar34.png')">
+                                <img src="./img/avatar35.png" alt="Avatar 35" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar35.png')">
+                                <img src="./img/avatar36.png" alt="Avatar 36" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar36.png')">
+                                <img src="./img/avatar37.png" alt="Avatar 37" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar37.png')">
+                                <img src="./img/avatar38.png" alt="Avatar 38" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar38.png')">
+                                <img src="./img/avatar39.png" alt="Avatar 39" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar39.png')">
+                                <img src="./img/avatar40.png" alt="Avatar 40" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar40.png')">
+                                <img src="./img/avatar41.png" alt="Avatar 41" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar41.png')">
+                                <img src="./img/avatar42.png" alt="Avatar 42" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar42.png')">
+                                <img src="./img/avatar43.png" alt="Avatar 43" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar43.png')">
+                                <img src="./img/avatar44.png" alt="Avatar 44" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar44.png')">
+                                <img src="./img/avatar45.png" alt="Avatar 45" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar45.png')">
+                                <img src="./img/avatar46.png" alt="Avatar 46" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar46.png')">
+                                <img src="./img/avatar47.png" alt="Avatar 47" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar47.png')">
+                                <img src="./img/avatar48.png" alt="Avatar 48" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar48.png')">
+                                <img src="./img/avatar49.png" alt="Avatar 49" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar49.png')">
+                                <img src="./img/avatar50.png" alt="Avatar 50" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar50.png')">
+                                <img src="./img/avatar51.png" alt="Avatar 51" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar51.png')">
+                                <img src="./img/avatar52.png" alt="Avatar 52" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar52.png')">
+                                <img src="./img/avatar53.png" alt="Avatar 53" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar53.png')">
+                                <img src="./img/avatar54.png" alt="Avatar 54" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar54.png')">
+                                <img src="./img/avatar55.png" alt="Avatar 55" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar55.png')">
+                                <img src="./img/avatar56.png" alt="Avatar 56" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar56.png')">
+                                <img src="./img/avatar57.png" alt="Avatar 57" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar57.png')">
+                                <img src="./img/avatar58.png" alt="Avatar 58" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar58.png')">
+                                <img src="./img/avatar59.png" alt="Avatar 59" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar59.png')">
+                                <img src="./img/avatar60.png" alt="Avatar 60" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar60.png')">
+                                <img src="./img/avatar61.png" alt="Avatar 61" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar61.png')">
+                                <img src="./img/avatar62.png" alt="Avatar 62" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar62.png')">
+                                <img src="./img/avatar63.png" alt="Avatar 63" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar63.png')">
+                                <img src="./img/avatar64.png" alt="Avatar 64" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar64.png')">
+                                <img src="./img/avatar65.png" alt="Avatar 65" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar65.png')">
+                                <img src="./img/avatar66.png" alt="Avatar 66" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar66.png')">
+                                <img src="./img/avatar67.png" alt="Avatar 67" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar67.png')">
+                                <img src="./img/avatar68.png" alt="Avatar 68" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar68.png')">
+                                <img src="./img/avatar69.png" alt="Avatar 69" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar69.png')">
+                                <img src="./img/avatar70.png" alt="Avatar 70" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar70.png')">
+                                <img src="./img/avatar71.png" alt="Avatar 71" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar71.png')">
+                                <img src="./img/avatar72.png" alt="Avatar 72" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar72.png')">
+                                <img src="./img/avatar73.png" alt="Avatar 73" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar73.png')">
+                                <img src="./img/avatar74.png" alt="Avatar 74" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar74.png')">
+                                <img src="./img/avatar75.png" alt="Avatar 75" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar75.png')">
+                                <img src="./img/avatar76.png" alt="Avatar 76" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar76.png')">
+                                <img src="./img/avatar77.png" alt="Avatar 77" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar77.png')">
+                                <img src="./img/avatar78.png" alt="Avatar 78" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar78.png')">
+                                <img src="./img/avatar79.png" alt="Avatar 79" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar79.png')">
+                                <img src="./img/avatar80.png" alt="Avatar 80" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar80.png')">
+                                <img src="./img/avatar81.png" alt="Avatar 81" class="avatar-option"
+                                    onclick="selecionarAvatar('./img/avatar81.png')">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <script src="app.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+            
+</body>
+
+</html>

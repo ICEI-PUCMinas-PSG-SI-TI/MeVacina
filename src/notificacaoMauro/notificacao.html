@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface de Notificações</title>
+    <link rel="stylesheet" href="styleNotificacao.css">
+</head>
+<body>
+   <!-- Sidebar -->
+    <!-- Barra lateral -->
+    <div class="sidebar">
+        <a href="index.html" ><img class="sidebar-icon" src="/img/botaohome.png" alt="Botão Home Page"></a>
+        <a href="notificacao.html" ><img class="sidebar-icon" src="/img/botaonotificacao.png" alt="Botão Home Page"></a>
+        <a><img class="sidebar-icon" src="/img/botaoconfiguser.png" alt="Botão de Configuração dos Perfis"></a>
+        <a><img class="sidebar-icon" src="/img/botaocalendario.png" alt="Botão Calendário"></a>
+        <a><img class="sidebar-icon" src="/img/botaosair.png" alt="Botão Sair"></a>
+    </div>
+
+    <!-- Conteúdo principal -->
+    <div class="main-content">
+        <div class="header">Notificações</div>
+        
+        <div class="notifications">
+            <!-- Janela de Notificação Grande -->
+            <div class="notification-window" id="notification-window">
+                <h3>Notificação</h3>
+                <p>Selecione uma notificação para ver os detalhes.</p>
+            </div>
+
+            <!-- Lista de notificações -->
+            <div class="notification-list" id="notification-list">
+                <!-- As notificações serão carregadas aqui dinamicamente -->
+            </div>
+        </div>
+    </div>
+
+    <script src="scriptNotificacao.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+</body>
+</html>

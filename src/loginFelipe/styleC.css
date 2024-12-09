@@ -1,0 +1,826 @@
+/* Fontes que Usei */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* Background Degradê do Site */
+body {
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(240, 246, 255, 1) 50%, rgba(124, 181, 255, 1) 100%);
+}
+
+
+/* Navbar */
+/* Menu Dropdown */
+.navbar-nav .nav-item {
+    position: relative;
+}
+
+.nav-item.dropdown:hover>.dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.527);
+    border-radius: 5px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    min-width: 200px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, visibility 0s 0.3s, transform 0.3s ease;
+
+}
+
+.nav-item.dropdown:hover>.dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    transition: opacity 0.3s ease, visibility 0s 0s, transform 0.3s ease;
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+    display: block;
+    left: 100%;
+    top: 0;
+    min-width: 180px;
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown-item {
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    padding: 10px 15px;
+    color: #3547e6;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+.dropdown-item:hover {
+    background-color: #f1f1f1;
+    transform: translateX(5px);
+
+}
+
+/* Animação para o Menu Dropdown da Navbar */
+@keyframes slideIn {
+    0% {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.nav-link:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: -1px -2px 8px rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
+}
+
+.dropdown-submenu .dropdown-item {
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.nav-link {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 500px;
+    font-size: 15px;
+    color: rgb(51, 51, 51);
+
+}
+
+.nav-link:hover {
+    color: rgb(255, 255, 255);
+    text-shadow: -1px -2px 8px rgba(0, 0, 0, 0.7);
+}
+
+
+/* Navbar - Logo e Área do Login */
+.navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.navbar-nav {
+    margin-left: 0;
+
+}
+
+.navbar .btn {
+    margin-left: auto;
+}
+
+.navbar-collapse {
+    flex-grow: 1;
+}
+
+.logosite {
+    margin: 0px auto;
+    width: 23%;
+    padding-top: 15px;
+
+}
+
+
+/* Personalização do Botão de Login */
+.btn-login {
+    position: relative;
+    width: auto;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    padding: 0 15px;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#loginbtn {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    z-index: 2;
+    transition: all 0.3s ease;
+
+}
+
+.hover-text {
+    position: absolute;
+    right: -100%;
+    white-space: nowrap;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #4b86f1;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+.btn-login:hover {
+    background-color: #e6f0ff;
+}
+
+.btn-login:hover .hover-text {
+    right: 10%;
+}
+
+.btn-login:hover #loginbtn {
+    transform: scale(0.9);
+}
+
+
+.btn-login:hover #loginbtn {
+    opacity: 0;
+    visibility: hidden;
+
+}
+
+
+/* Imagens Arredondadas dos Grupos Vacinais*/
+.vacinassecao img {
+    border: 3px solid #e3f2fd;
+}
+
+
+/* Banner Principal com o Registre-se*/
+.banner-container {
+    position: relative;
+    width: 80%;
+    max-width: 1300px;
+    -webkit-border-radius: 5px;
+    -webkit-border-top-right-radius: 50px;
+    -webkit-border-bottom-left-radius: 50px;
+    -moz-border-radius: 5px;
+    -moz-border-radius-topright: 50px;
+    -moz-border-radius-bottomleft: 50px;
+    border-radius: 5px;
+    border-top-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    overflow: hidden;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+    margin: 0px auto;
+}
+
+.banner-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.banner-content {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    color: white;
+    z-index: 2;
+    text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.banner-content h1 {
+    padding-top: 200px;
+    font-size: 70px;
+    font-weight: 700;
+    margin-bottom: 20px;
+    line-height: 1.4;
+    font-family: "DM Sans", sans-serif;
+}
+
+.banner-content a {
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 50px;
+    background-color: #4b86f1;
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.banner-content a:hover {
+    background-color: #346bd6;
+    transform: scale(1.05);
+}
+
+
+/* Banner da Section com as Informações dos Serviços do MeVacina */
+.info-section {
+    background-color: #193079;
+    color: white;
+    padding: 30px 15px;
+    width: 1500px;
+    margin: 0 auto;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.info-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/img/coracaobannersection.png');
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: contain;
+    opacity: 0.3;
+    z-index: -1;
+
+}
+
+.info-section .row {
+    position: relative;
+    z-index: 2;
+}
+
+.info-card {
+    display: flex;
+    align-items: center;
+    text-align: left;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding: 26px;
+    padding-right: 20px;
+}
+
+.info-card img {
+    width: 85px;
+    height: 85px;
+    background: white;
+    border-radius: 15.45%;
+    padding: 10px;
+    z-index: 2;
+    position: relative;
+}
+
+.info-card h3 {
+    font-size: 22px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 650;
+    margin-bottom: 5px;
+
+}
+
+.info-card p {
+    font-size: 17px;
+    margin: 0;
+    color: #DAD2D2;
+}
+
+
+
+/*Seção de Principais Vacinas */
+.vacinassecao {
+    text-align: center;
+    max-width: 1000px;
+    display: flex;
+
+}
+
+.vacinassecao h3 {
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 30px;
+    padding-top: 60px;
+    font-family: "DM Sans", sans-serif;
+    text-transform: uppercase;
+    color: black !important;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    padding: 0;
+
+}
+
+.button-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #B8D5F6;
+    border: none;
+    border-radius: 25px;
+    padding: 15px 25px;
+    font-weight: bold;
+    color: #353535;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    margin-left: calc(var(--offset, 0) * 15px);
+    cursor: pointer;
+    margin-bottom: 25px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 600;
+    font-size: 25px;
+
+}
+
+.button-item::after {
+    content: '\276F';
+    font-size: 18px;
+    color: #c05151;
+}
+
+
+.button-item:hover {
+    background-color: #c0dffc;
+    box-shadow: 0 0 15px 5px rgba(192, 223, 252, 0.8);
+    transform: scale(1.02);
+}
+
+
+.button-item:nth-child(1) {
+    --offset: -4;
+}
+
+.button-item:nth-child(2) {
+    --offset: 3;
+}
+
+.button-item:nth-child(3) {
+    --offset: -4;
+}
+
+.button-item:nth-child(4) {
+    --offset: 3;
+}
+
+.button-item:nth-child(5) {
+    --offset: -4;
+}
+
+.button-item:nth-child(6) {
+    --offset: 5;
+}
+
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+
+.iconpvacina {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    left: 270px;
+    border: 0px !important;
+}
+
+
+/*Vacina por Grupos Vacinais */
+.vacinapgruposh3 {
+    padding-left: 220px !important;
+    text-wrap: nowrap;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding-left: 150px;
+}
+
+.group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.circle-image {
+    width: 220px;
+    height: 220px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: #e0e0e0;
+    box-shadow: 20px 20px 60px #bebebe,
+        -20px -20px 60px #ffffff;
+}
+
+.label {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #8bb7fd;
+    padding: 5px 15px;
+    border-radius: 20px;
+    width: fit-content;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+
+}
+
+
+/* Rodapé */
+.footer {
+    background-color: #7bb0ff;
+    padding: 40px 20px;
+    color: #FFFDFD;
+    font-family: "Open Sans", sans-serif;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-logo {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-logo-img {
+    max-width: 190px;
+    height: auto;
+    display: block;
+}
+
+.footer-social {
+    margin-top: 10px;
+    display: flex;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.footer-social a {
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-social a:hover {
+    color: #3700ff;
+}
+
+.footer-links {
+    display: flex;
+    gap: 40px;
+    flex: 2;
+    justify-content: flex-end;
+
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 8px;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #1b1b1b;
+    transition: color 0.3s;
+    font-weight: 350;
+}
+
+.footer-section ul li a:hover {
+    color: white;
+}
+
+.footer-copyright {
+    font-size: 15px;
+    color: #FBDCDC;
+    margin-top: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    margin-left: -40px;
+}
+
+/* Ajustando Para telas Menores◝(ᵔᗜᵔ)◜*/
+@media (max-width: 768px) {
+
+    .logosite {
+        width: 40%;
+        margin-right: 23%;
+    }
+
+
+    .banner-content {
+        top: 50%;
+        left: 30%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 90%;
+    }
+
+    .banner-content h1 {
+        font-size: 1.4rem;
+        line-height: 1.2;
+        padding-top: 0;
+        margin-bottom: 15px;
+    }
+
+    .banner-content a {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+
+
+    .banner-container {
+        width: 99%;
+    }
+
+    .navbar-collapse {
+        flex-grow: 1;
+    }
+
+    .navbar-brand {
+        left: 0;
+        transform: none;
+    }
+
+    .info-section {
+        padding: 10px;
+        width: 90%;
+    }
+
+    .info-card {
+        flex-direction: column;
+    }
+
+    .vacinassecao {
+        flex-direction: column;
+        align-items: center;
+        padding: 20px 10px;
+    }
+
+    .vacinassecao h3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .list-group {
+        width: 100%;
+        padding: 0;
+    }
+
+    .button-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .button-item {
+        font-size: 1rem;
+        padding: 10px 15px;
+        margin: 10px auto;
+        width: 90%;
+        text-align: center;
+    }
+
+    .iconpvacina {
+        width: 50px;
+        height: 80%;
+        left: auto;
+        margin: -110px auto;
+        position: top;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        padding: 0 10px;
+        justify-items: center; 
+        justify-content: center; 
+        margin: 0 auto; 
+        max-width: 100%; 
+    }
+
+    .group {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .circle-image {
+        width: 170px;
+        height: 170px;
+        margin-bottom: 5px;
+    }
+
+    .label {
+        font-size: 1.1rem;
+        line-height: 1.2;
+    }
+
+
+    .vacinapgruposh3 {
+        font-size: 1.5rem;
+        margin-bottom: 20px;
+        text-align: center;
+        margin-left: -200px;
+    }
+
+    .footer {
+        padding: 20px 10px;
+        text-align: center;
+    }
+
+    .footer-logo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .footer-logo-img {
+        width: 150px;
+        margin-bottom: 10px;
+    }
+
+    .footer-social {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-bottom: 15px;
+    }
+
+    .footer-social a {
+        color: #333;
+        font-size: 1.5rem;
+    }
+
+    .footer-copyright {
+        font-size: 0.8rem;
+        color: #555;
+    }
+
+    .footer-links {
+        display: none;
+    }
+
+    .footer-copyright {
+        padding-left: 10%;
+        color: #d8e8fa;
+    }
+}
+
+
+/* PARTE FELIPE MODAL */
+
+.modal-content {
+    border-radius: 15px;
+    background: linear-gradient(180deg, #527ce6, #ffffff);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.input-group-text {
+    background-color: #f1f1f1;
+    border-right: 0;
+}
+
+.form-control {
+    border-left: 0;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    border: none;
+    border-radius: 27px;
+}
+
+.btn-primary:hover {
+    background-color: #003f7f;
+}
+
+.btn-danger {
+    background-color: #ea4335;
+    border: none;
+    border-radius: 27px;
+}
+
+.btn-danger:hover {
+    background-color: #c73224;
+}
+
+.link-secondary {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.modal-body {
+    max-width: 400px;
+    margin: auto;
+}
+
+.text-muted {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.input-group .form-control {
+    border: none; 
+    border-bottom: 2px solid #ccc; 
+    border-radius: 0; 
+    background: transparent; 
+    outline: none; 
+    box-shadow: none; 
+    transition: border-color 0.3s ease; 
+}
+
+.input-group .form-control:focus {
+    border-bottom: 2px solid #0056b3; 
+}
+
+
+.input-group-text {
+    border: none; 
+    background: transparent; 
+    color: #666; 
+}
+
+
+.input-group .form-control:focus + .input-group-text {
+    color: #0056b3; 
+}
+
+#logo {
+    width: 70%;
+}
+
+* {
+    font-family: "DM Sans", sans-serif;
+}
+
+.emailsenha {
+    font-size: 125%;
+}

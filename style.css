@@ -6,9 +6,9 @@ body {
     background: #eff1fe;
     font-family: "Montserrat", sans-serif;
     color: #333;
-    border: 50px solid #a8c7f5;
-    border-radius: 100px;
+
 }
+
 
 
 /* Sidebar e Ícones */
@@ -291,15 +291,15 @@ aside {
 
 }
 
-.modal-fundo {
+#modal-fundo {
     background: linear-gradient(to bottom, #95c3ff, #5a9bf6);
     color: white;
     border-radius: 10px;
     padding: 20px;
 }
 
-.modal-fundo .modal-header,
-.modal-fundo .modal-footer {
+#modal-fundo .modal-header,
+#modal-fundo .modal-footer {
     background: transparent;
     border: none;
 }
@@ -336,44 +336,55 @@ aside {
     max-width: 75px;
 }
 
-.L_hide_mobile{
+.L_hide_mobile {
     display: none;
 }
 
-nav.menu-toggle{
+nav.menu-toggle {
     position: relative;
 }
 
-nav .position-fixed{
+nav .position-fixed {
     top: 0px;
     bottom: 0px;
 }
 
-nav .navbar-toggler{
+nav .navbar-toggler {
     width: 50px;
     position: absolute;
     left: 5vw;
     top: 10vh;
 }
 
-nav img{
+nav img {
     width: 50px;
     padding: 0px;
 }
 
-collapse{
+collapse {
     background-color: white;
 }
 
-nav .navbar-collapse{
+nav .navbar-collapse {
     background-color: #000000b0;
 }
 
-nav .navbar-collapse .icons{
+nav .navbar-collapse .icons {
     position: absolute;
     left: 5vw;
     top: 25vh;
 }
+
+
+.imgcalendarioprot img {
+    width: 80%;
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    padding-top: 30px;
+}
+
+
 
 /*   CSS para Celular - HELPPPPPPPPPPP ME    */
 
@@ -381,6 +392,7 @@ nav .navbar-collapse .icons{
 
     body {
         border: 0px;
+
     }
 
     .menu-toggle {
@@ -391,6 +403,8 @@ nav .navbar-collapse .icons{
         z-index: 1000;
 
     }
+
+
 
     .menu-mobile {
         position: fixed;
@@ -407,8 +421,8 @@ nav .navbar-collapse .icons{
     }
 
     .menu-mobile.active {
-      display: flex;
-    }  
+        display: flex;
+    }
 
     .bg-sidebar {
         display: none !important;
@@ -420,38 +434,161 @@ nav .navbar-collapse .icons{
         object-fit: contain;
     }
 
-    .L_hide_mobile{
+    .L_hide_mobile {
         display: block;
+        pointer-events: none;
     }
 
-    .descertit{
+    .descertit {
         padding-left: 50px;
         padding-top: 20px;
     }
 
-    .gerenciarVacinas{
+    .gerenciarVacinas {
         font-size: 17px;
         margin: 0px;
-       
+
     }
 
-    .btnaddVacinas{
+    .btnaddVacinas {
         margin-top: 10px;
     }
 
-    .cardgapcel{
+    .cardgapcel {
         margin: 10px;
     }
-    
-    .imgbv{
+
+    .imgbv {
         padding-top: 15px;
     }
 
-    .perguntaBV{
+    .perguntaBV {
         padding-top: 10px;
         font-size: 20px;
     }
+    
+    .imgcalendarioprot img {
+        width: 100% !important;
 
-
+    }
 
 }
+
+
+
+@media screen and (max-width: 1366px) {
+
+    .imgcalendarioprot img {
+        width: 80%;
+        max-width: 100%;
+        height: auto;
+        object-fit: cover;
+        padding-top: 0px;
+    }
+
+    .botaoGerenciarContas {
+        width: 100%;
+        border-radius: 15px;
+        font-size: 16px;
+    }
+
+}
+
+
+
+/* MODAL FELIPE */
+.modal-content {
+    border-radius: 15px;
+    background: linear-gradient(180deg, #527ce6, #ffffff);
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.input-group-text {
+    background-color: #f1f1f1;
+    border-right: 0;
+}
+
+.form-control {
+    border-left: 0;
+}
+
+.btn-primary {
+    background-color: #0056b3;
+    border: none;
+    border-radius: 27px;
+}
+
+.btn-primary:hover {
+    background-color: #003f7f;
+}
+
+.btn-danger {
+    background-color: #ea4335;
+    border: none;
+    border-radius: 27px;
+}
+
+.btn-danger:hover {
+    background-color: #c73224;
+}
+
+.link-secondary {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.modal-body {
+    max-width: 400px;
+    margin: auto;
+}
+
+
+#dataHora {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.text-muted {
+
+    font-weight: 500;
+}
+
+.input-group .form-control {
+    border: none;
+    border-bottom: 2px solid #ccc;
+    border-radius: 0;
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    transition: border-color 0.3s ease;
+}
+
+.input-group .form-control:focus {
+    border-bottom: 2px solid #0056b3;
+}
+
+
+.input-group-text {
+    border: none;
+    background: transparent;
+    color: #666;
+}
+
+
+.input-group .form-control:focus+.input-group-text {
+    color: #0056b3;
+}
+
+#logo {
+    width: 70%;
+}
+
+#loginModal {
+    font-family: "DM Sans", sans-serif;
+}
+
+.emailsenha {
+    font-size: 125%;
+}
+

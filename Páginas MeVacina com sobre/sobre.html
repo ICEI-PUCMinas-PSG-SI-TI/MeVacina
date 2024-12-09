@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MeVacina - Sobre</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="stylessobre.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-transparent">
+        <div class="container-fluid navbarcontainer">
+            <!-- Menu Items à Esquerda -->
+            <div class="collapse navbar-collapse" id="navbarcss">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="home.html">INÍCIO</a></li>
+                    <!-- Dropdown para "INFORMAÇÕES VACINAIS" -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            INFORMAÇÕES VACINAIS
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <!-- Dropdown para "Principais Vacinas" -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Principais Vacinas</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Covid-19</a></li>
+                                    <li><a class="dropdown-item" href="#">Febre Amarela</a></li>
+                                    <li><a class="dropdown-item" href="#">Gripe</a></li>
+                                    <li><a class="dropdown-item" href="#">Hepatites A e B</a></li>
+                                    <li><a class="dropdown-item" href="#">HPV</a></li>
+                                    <li><a class="dropdown-item" href="#">Tríplice bacteriana</a></li>
+                                </ul>
+                            </li>
+                            <!-- Dropdown para "Vacina por Grupos" -->
+                            <li class="dropdown-submenu">
+                                <a class="dropdown-item dropdown-toggle" href="#">Vacina por Grupos</a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Idosos</a></li>
+                                    <li><a class="dropdown-item" href="#">Bebês</a></li>
+                                    <li><a class="dropdown-item" href="#">Mulheres</a></li>
+                                    <li><a class="dropdown-item" href="#">PCDs</a></li>
+                                    <li><a class="dropdown-item" href="#">Adolescentes</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="sobre.html">SOBRE</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">CONTATO</a></li>
+                </ul>
+            </div>
+
+            <!-- Logo Centralizada -->
+            <a class="navbar-brand mx-auto d-flex align-items-center" href="#">
+                <img src="/img/logomevacina.png" alt="Ícone" class="logosite">
+            </a>
+
+            <!-- Botão de Login à Direita -->
+            <div class="d-flex px-3 pt-2">
+                <a href="#" class="btn-login d-flex align-items-center" data-bs-toggle="modal" 
+                data-bs-target="#loginModal">
+                    <img id="loginbtn" src="/img/userlogin.png" alt="Login">
+                    <span class="hover-text">LOGAR</span>
+                </a>
+                <!-- Modal -->
+                <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-content">
+                            <div class="modal-body p-5">
+                                <div class="text-center">
+                                    <!-- Logo -->
+                                    <h2 class="mb-4">
+                                        <img id="logo" src="img/logomevacina.png" alt="Vacina" width="30">
+                                    </h2>
+                                </div>
+                                <!-- Formulário -->
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="email" class="form-label fw-bold emailsenha">E-mail</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text">@</span>
+                                            <input type="email" class="form-control" id="email"
+                                                placeholder="Digite seu e-mail">
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="password" class="form-label fw-bold emailsenha">Senha</label>
+                                        <div class="input-group">
+                                            <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                            <input type="password" class="form-control" id="password"
+                                                placeholder="Digite sua senha">
+                                        </div>
+                                    </div>
+                                    <div class="text-end mb-3">
+                                        <a href="cadastro.html" class="link-secondary">Novo Usuário? Registre-se</a>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary w-100">ENTRAR</button>
+                                </form>
+
+                                <!-- Linha decorativa e texto -->
+                                <div class="d-flex align-items-center my-4">
+                                    <hr class="flex-grow-1" style="height: 1px; background: black; border: none;">
+                                    <span class="mx-3 text-muted">Ou conecte-se com</span>
+                                    <hr class="flex-grow-1" style="height: 1px; background: black; border: none;">
+                                </div>
+
+                                <!-- Botões de redes sociais -->
+                                <div class="d-flex justify-content-between">
+                                    <button
+                                        class="btn btn-primary d-flex align-items-center justify-content-center w-50 me-2">
+                                        <i class="bi bi-facebook me-2"></i> Facebook
+                                    </button>
+                                    <button
+                                        class="btn btn-danger d-flex align-items-center justify-content-center w-50 ms-2">
+                                        <i class="bi bi-google me-2"></i> Google
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="col-md-12 text-center d-md-none d-block">
+        <img src="/img/bannersobre1.png" alt="Team working" class="img-fluid imagembannersobre" id="celularbanner">
+    </div>
+
+    <!-- Conteúdo Principal da Página Sobre-->
+    <section class="maindosobre text-center pt-5">
+        <div class="container">
+            <h1 class="display-4 pb-3 mudarcorzinha">Sobre o Projeto</h1>
+            <p class="lead p-2">Projeto TIAW desenvolvido pelo Grupo 02: Transformando a organização da sua <br>
+                Carteira
+                Vacinal em algo simples, eficiente e acessível.
+            </p>
+        </div>
+    </section>
+
+    <!-- Resumo do Projeto -->
+    <section class="custom-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-12 text-center mb-4">
+                    <img src="/img/bannersobre1.png" alt="Banner - Pessoas Vacinadas (Arte)" class="img-fluid imagembannersobre"
+                        id="desktopbanner">
+                </div>
+                <div class="conteudosecaosobre d-flex flex-wrap">
+                    <div class="conteudosobreesquerda flex-basis-100 text-center mb-4">
+                        <h2 class="mb-4">MeVacina <br>Sua Carteira de Vacina Digital</h2>
+                        <a href="#" class="btn btn-custom px-4 py-2">Contate-nos →</a>
+                    </div>
+                    <div class="conteudosobredireita flex-basis-100 text-center text-md-start">
+                        <p class="mb-3 fw-bold">Organização simples para você e sua família!</p>
+                        <p class="mb-4">O MeVacina é um projeto desenvolvido por alunos da PUC Minas em 2024 com a
+                            intenção de transformar a forma como as pessoas organizam e acompanham suas vacinas. O site
+                            funciona como uma carteira vacinal digital, criada com o objetivo de facilitar o acesso às
+                            informações sobre imunizações, garantir maior controle e organização, e ajudar os usuários a
+                            se manterem protegidos contra os diversos tipos de doenças.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <div class="text-center pt-3">
+        <img src="img/divcoracao.png" class="imagemdiv" alt="Divisória Coração">
+    </div>
+
+    <!-- Explicação do Projeto com Link do GitHub -->
+    <section class="secaosobre2">
+        <div class="container">
+            <div class="row align-items-center">      
+                <div class="col-md-6 d-flex justify-content-center">
+                    <img src="img/bannersobre3.png" alt="Menino abraçando Vacina" class="img-fluid rounded">
+                </div>
+                <div class="col-md-6 textoconteudosobre2">
+                    <h2 class="fw-bold mb-4 textoconteudosobre2">Acessibilidade e Conveniência para seu Calendário
+                        Vacinal</h2>
+                    <p class="mb-4 textoconteudosobre2">MeVacina não substitui legalmente um cartão de vacinação
+                        oficial, mas ele simplifica
+                        e torna mais eficiente o processo de acompanhar as campanhas de vacinação e se manter em dia com
+                        seu calendário de vacinas. Com uma interface prática e intuitiva, nós oferecemos conveniência e
+                        acessibilidade para você, garantindo que esteja sempre atualizado!</p>
+                    <div class="btn-group">
+                        <a href="https://github.com/ICEI-PUCMinas-PSG-SI-TI/psg-si-m-ti-2024-2-p1-tiaw-equipe-projeto-carteira-de-vacina?tab=readme-ov-file"
+                            class="botaosobre2">Leia Mais no GitHub →</a>
+                        <a href="https://www.youtube.com/watch?v=wJ2dxsVLAK0" class="play-button"><i
+                                class="fas fa-play"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <!-- Seção dos Nossos Valores -->
+    <section class="py-5">
+        <div class="container text-center">
+            <h2 class="mb-3 display-4">Nossos Valores</h2>
+            <p class="mb-5 subtitulonossov">Nossos valores moldam a organização e definem o caráter do nosso projeto</p>
+            <div class="row justify-content-center">
+                <div class="col-md-6 mb-4">
+                    <div class="card valores-card">
+                        <div class="icon-container">
+                            <img src="/img/iconsobre-inov.png" alt="Acessibilidade Ícone" class="icon-img">
+                        </div>
+                        <h5 class="mt-4">Inovação</h5>
+                        <p>Nosso compromisso é criar soluções tecnológicas com inovações para que tornem o
+                            acompanhamento vacinal mais eficiente e acessível, ajudando as pessoas a protegerem sua
+                            saúde e a de suas famílias.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card valores-card">
+                        <div class="icon-container">
+                            <img src="/img/iconsobre-acess.png" alt="Inovação Ícone" class="icon-img">
+                        </div>
+                        <h5 class="mt-4">Acessibilidade</h5>
+                        <p>Acreditamos que a informações sobre a imunização deve ser de simples acesso e compreensão,
+                            promovendo inclusão e garantindo que todas as pessoas possam se beneficiar de nossos
+                            serviços.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card valores-card">
+                        <div class="icon-container">
+                            <img src="/img/iconsobre-efic.png" alt="Eficiência Ícone" class="icon-img">
+                        </div>
+                        <h5 class="mt-4">Eficiência</h5>
+                        <p>Focamos em simplificar processos e facilitar o gerenciamento de carteiras vacinais,
+                            proporcionando uma experiência intuitiva que economiza tempo e reduz complicações para você.
+                        </p>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                    <div class="card valores-card">
+                        <div class="icon-container">
+                            <img src="/img/iconsobre-compr.png" alt="Compromisso com a Saúde Ícone" class="icon-img">
+                        </div>
+                        <h5 class="mt-4">Compromisso com a Saúde</h5>
+                        <p>Nosso objetivo é contribuir para uma sociedade mais saudável, garantindo que os usuários
+                            estejam sempre informados e protegidos contra doenças, através de uma plataforma digital
+                            segura e confiável.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Nossa Equipe (Lindíssimos, tome tome) -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 textoequipe">Conheça a nossa Equipe</h2>
+            <p class="text-center mb-5 subequipe">Alunos PUC Minas São Gabriel - Sistemas de Informação</p>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card profile-card-1">
+                            <img src="https://images.unsplash.com/photo-1480497490787-505ec076689f?q=80&w=2500&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="profile-sample1" class="background" />
+                            <img src="/img/pipiememe.PNG" alt="Foto de Perfil - Felipe Chaves" class="profile" />
+                            <div class="card-content">
+                                <h2> Felipe Chaves<small>Scrum Master</small></h3>
+                                    <div class="icon-block"><a href="#"><i class="fa fa-facebook"></i></a><a href="#">
+                                            <i class="fa fa-twitter"></i></a><a href="#"> <i
+                                                class="fa-brands fa-github"></i></a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card profile-card-1">
+                            <img src="https://images.unsplash.com/photo-1455156218388-5e61b526818b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="profile-sample1" class="background" />
+                            <img src="/img/eo.PNG" alt="Foto de Perfil - Carolina Miglio" class="profile" />
+                            <div class="card-content">
+                                <h2>Carolina Miglio<small>Product Owner</small></h3>
+                                    <div class="icon-block"><a href="#"><i class="fa fa-facebook"></i></a><a href="#">
+                                            <i class="fa fa-twitter"></i></a><a href="#"> <i
+                                                class="fa-brands fa-github"></i></a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card profile-card-1">
+                            <img src="https://plus.unsplash.com/premium_photo-1672115680958-54438df0ab82?q=80&w=2684&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                alt="profile-sample1" class="background" />
+                            <img src="https://avatars.githubusercontent.com/u/113644406?v=4" alt="Foto de Perfil - Mauro Brasil"
+                                class="profile" />
+                            <div class="card-content">
+                                <h2>Mauro Brasil<small>Desenvolvedor</small></h3>
+                                    <div class="icon-block"><a href="#"><i class="fa fa-facebook"></i></a><a href="#">
+                                            <i class="fa fa-twitter"></i></a><a href="#"> <i
+                                                class="fa-brands fa-github"></i></a>
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+
+    <!-- Rodapézinho -->
+    <footer class="footer">
+        <div class="footer-content pt-3">
+            <!-- Logo e Redes Sociais -->
+            <div class="footer-logo">
+                <img src="/img/logomevacina.png" alt="Logo MeVacina" class="footer-logo-img">
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                </div>
+                <p class="footer-copyright">Copyrights PUC MINAS | Grupo 02 ©</p>
+            </div>
+
+            <!-- Links de Contato e Navegação -->
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <ul>
+                        <li><a href="#">Formulário</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">E-mail</a></li>
+                        <li><a href="#">Redes Sociais</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Links</h4>
+                    <ul>
+                        <li><a href="#">Início</a></li>
+                        <li><a href="#">Perfil</a></li>
+                        <li><a href="#">Informações Vacinais</a></li>
+                        <li><a href="#">Efeitos Colaterais</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/652d5e6ed7.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

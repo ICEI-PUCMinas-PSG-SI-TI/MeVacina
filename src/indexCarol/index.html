@@ -171,8 +171,8 @@
             </div>
 
 
-            <!-- Modal -->
-            <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+        <!-- Modal -->
+        <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
             aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered">
                 <div class="modal-content">
@@ -419,18 +419,28 @@
 
 </body>
 <script>
-     document.addEventListener("DOMContentLoaded", () => {
-        // Obtém o nome do usuário do localStorage
-        const nomeUsuario = localStorage.getItem("nomeUsuario");
+    
+    document.addEventListener("DOMContentLoaded", async () => {
+    try {
+        // Faz uma requisição para obter os dados do usuário autenticado no db.json
+        const response = await fetch("http://localhost:3000/usuarios");
+        const usuarios = await response.json();
 
-        if (nomeUsuario) {
+        // Obtém o usuário autenticado (substitua por lógica real de autenticação)
+        const usuarioAutenticado = usuarios[0]; // Supondo que o primeiro usuário seja o autenticado.
+
+        if (usuarioAutenticado) {
             // Exibe o nome do usuário em um elemento específico
             const userDisplay = document.getElementById("nomeUser-principal");
             if (userDisplay) {
-                userDisplay.textContent = `Bem-vindo, ${nomeUsuario}!`;
+                userDisplay.textContent = `Bem-vindo, ${usuarioAutenticado.nome}!`;
             }
         }
-    });
+    } catch (error) {
+        console.error("Erro ao carregar dados do usuário:", error);
+    }
+});
+
 
     function mostrarDataHora() {
         var dataAtual = new Date();

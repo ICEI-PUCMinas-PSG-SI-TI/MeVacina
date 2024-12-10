@@ -36,11 +36,11 @@
             <div class="row vh-100">
                 <aside class="col-lg-1 bg-sidebar d-flex flex-column justify-content-between align-items-center p-3">
                     <div class="top-icons d-flex flex-column align-items-center gap-3">
-                        <img class="btnhome botaosidebar" src="/img/botaohome.png" alt="Botão Home Page">
-                        <img class="btnhome botaosidebar" src="/img/botaouserpginicial.png" alt="Botão Home Page">
-                        <img class="botaosidebar" src="/img/botaonotificacao.png" alt="Botão Notificação">
-                        <img class="botaosidebar" src="/img/botaoconfiguser.png" alt="Botão Configuração">
-                        <img class="botaosidebar btncalendario" src="/img/botaocalendario.png" alt="Botão Calendário">
+                        <a href="/public/indexCarol/index.html"><img class="btnhome botaosidebar" src="/img/botaohome.png" alt="Botão Home Page"></a>
+                        <a href="/public/Páginas MeVacina/home.html"><img class="btnhome botaosidebar" src="/img/botaouserpginicial.png" alt="Botão Home Page"></a>
+                        <a href="/public/notificacaoMauro/notificacao.html"><img class="botaosidebar" src="/img/botaonotificacao.png" alt="Botão Notificação"></a>
+                        <a href="#"><img class="botaosidebar" src="/img/botaoconfiguser.png" alt="Botão Configuração"></a>
+                        <a href="#"><img class="botaosidebar btncalendario" src="/img/botaocalendario.png" alt="Botão Calendário"></a>
                     </div>
                     <div class="bottom-icon">
                         <img class="botaosidebar" src="/img/botaosair.png" alt="Botão Sair">
@@ -63,8 +63,8 @@
                     <section
                         class="bg-info px-5 text-white d-flex justify-content-center align-items-center flex-wrap-reverse mb-4 imgbv">
                         <div>
-                            <h2 class="fw-semibold text-center boasVindastexto">Bem-Vindo, <span
-                                    id="nomeUser-principal">[Nome da Pessoa]</span></h2>
+                            <h2 class="fw-semibold text-center boasVindastexto">Bem-Vindo, 
+                                <span id="nomeUser-principal">[Nome da Pessoa]</span></h2>
                             <p class="text-center fw-semibold perguntaBV">Como anda seu calendário vacinal?</p>
                         </div>
                         <!-- Avatar do Boas-Vindas -->
@@ -124,7 +124,7 @@
                             <div class="row">
                                 <h3 class="col-xl-6 text-start fw-bold p-4 tituloSidebar-Perfil">Perfil</h3>
                                 <div class="col-xl-6 d-flex justify-content-end align-items-center">
-                                    <img class="botaonotificacaoSidebar" src="./img/sinonotifica.png"
+                                    <img class="botaonotificacaoSidebar" src="/img/sinonotifica.png"
                                         alt="Botão Notificação">
                                 </div>
                             </div>
@@ -172,63 +172,63 @@
 
 
             <!-- Modal -->
-            <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered">
-                    <div class="modal-content">
-                        <div class="modal-body p-5">
-                            <div class="text-center">
-                                <!-- Logo -->
-                                <h2 class="mb-4">
-                                    <img id="logo" src="/img/logomevacina.png" alt="Vacina" width="30">
-                                </h2>
+            <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                    <div class="modal-body p-5">
+                        <div class="text-center">
+                            <!-- Logo -->
+                            <h2 class="mb-4">
+                                <img id="logo" src="/img/logomevacina.png" alt="Vacina" width="30">
+                            </h2>
+                        </div>
+                        <!-- Formulário -->
+                        <form id="login-form">
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-bold emailsenha">E-mail</label>
+                                <div class="input-group">
+                                    <span class="input-group-text">@</span>
+                                    <input type="email" class="form-control" id="email"
+                                        placeholder="Digite seu e-mail">
+                                </div>
                             </div>
-                            <!-- Formulário -->
-                            <form>
-                                <div class="mb-3">
-                                    <label for="email" class="form-label fw-bold emailsenha">E-mail</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text">@</span>
-                                        <input type="email" class="form-control" id="email"
-                                            placeholder="Digite seu e-mail">
-                                    </div>
+                            <div class="mb-3">
+                                <label for="password" class="form-label fw-bold emailsenha">Senha</label>
+                                <div class="input-group">
+                                    <span class="input-group-text"><i class="bi bi-lock"></i></span>
+                                    <input type="password" class="form-control" id="password"
+                                        placeholder="Digite sua senha">
                                 </div>
-                                <div class="mb-3">
-                                    <label for="password" class="form-label fw-bold emailsenha">Senha</label>
-                                    <div class="input-group">
-                                        <span class="input-group-text"><i class="bi bi-lock"></i></span>
-                                        <input type="password" class="form-control" id="password"
-                                            placeholder="Digite sua senha">
-                                    </div>
-                                </div>
-                                <div class="text-end mb-3">
-                                    <a href="/public/loginFelipe/cadastro.html" class="link-secondary">Novo Usuário? Registre-se</a>
-                                </div>
-                                <button type="submit" class="btn btn-primary w-100">ENTRAR</button>
-                            </form>
+                            </div>
+                            <div class="text-end mb-3">
+                                <a href="/public/loginFelipe/cadastro.html" class="link-secondary">Novo Usuário? Registre-se</a>
+                            </div>
+                            <button  type="submit" class="btn btn-primary w-100">ENTRAR</button>
+                        </form>
 
-                            <!-- Linha decorativa e texto -->
-                            <div class="d-flex align-items-center my-4">
-                                <hr class="flex-grow-1" style="height: 1px; background: black; border: none;">
-                                <span class="mx-3 text-muted">Ou conecte-se com</span>
-                                <hr class="flex-grow-1" style="height: 1px; background: black; border: none;">
-                            </div>
+                        <!-- Linha decorativa e texto -->
+                        <div class="d-flex align-items-center my-4">
+                            <hr class="flex-grow-1" style="height: 1px; background: black; border: none;">
+                            <span class="mx-3 text-muted">Ou conecte-se com</span>
+                            <hr class="flex-grow-1" style="height: 1px; background: black; border: none;">
+                        </div>
 
-                            <!-- Botões de redes sociais -->
-                            <div class="d-flex justify-content-between">
-                                <button
-                                    class="btn btn-primary d-flex align-items-center justify-content-center w-50 me-2">
-                                    <i class="bi bi-facebook me-2"></i> Facebook
-                                </button>
-                                <button
-                                    class="btn btn-danger d-flex align-items-center justify-content-center w-50 ms-2">
-                                    <i class="bi bi-google me-2"></i> Google
-                                </button>
-                            </div>
+                        <!-- Botões de redes sociais -->
+                        <div class="d-flex justify-content-between">
+                            <button
+                                class="btn btn-primary d-flex align-items-center justify-content-center w-50 me-2">
+                                <i class="bi bi-facebook me-2"></i> Facebook
+                            </button>
+                            <button
+                                class="btn btn-danger d-flex align-items-center justify-content-center w-50 ms-2">
+                                <i class="bi bi-google me-2"></i> Google
+                            </button>
                         </div>
                     </div>
                 </div>
             </div>
-
+        </div>
             <!-- Modal de Escolha de Avatar -->
             <div class="modal fade" id="avatarModal" tabindex="-1" aria-labelledby="avatarModalLabel"
                 aria-hidden="true">
@@ -412,13 +412,26 @@
         </div>
     </div>
 
-
-    <script src="login.js"></script>
+    
+    <script src="/public/loginFelipe/login.js"></script>
     <script src="app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 <script>
+     document.addEventListener("DOMContentLoaded", () => {
+        // Obtém o nome do usuário do localStorage
+        const nomeUsuario = localStorage.getItem("nomeUsuario");
+
+        if (nomeUsuario) {
+            // Exibe o nome do usuário em um elemento específico
+            const userDisplay = document.getElementById("nomeUser-principal");
+            if (userDisplay) {
+                userDisplay.textContent = `Bem-vindo, ${nomeUsuario}!`;
+            }
+        }
+    });
+
     function mostrarDataHora() {
         var dataAtual = new Date();
         var diasSemana = ["Domingo", "Segunda-feira", "Terça-feira", "Quarta-feira", "Quinta-feira", "Sexta-feira", "Sábado"];

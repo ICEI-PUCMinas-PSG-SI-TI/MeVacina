@@ -391,14 +391,6 @@
       "dataPrimeiraDose": "2022-03-12",
       "diasProximaDose": 21,
       "dosesRestantes": 1
-    },
-    {
-      "id": "7c59",
-      "vacina": "Pneumo 23",
-      "idade": 14,
-      "dataPrimeiraDose": "2010-02-12",
-      "diasProximaDose": 13,
-      "dosesRestantes": 1
     }
   ],
   "usuarios": [

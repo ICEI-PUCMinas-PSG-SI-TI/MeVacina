@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil de Vacinação</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+    <div class="container-fluid vh-100 p-4">
+        <div class="row h-100">
+            <aside class="col-xl-1 bg-sidebar d-flex flex-column align-items-center p-3">
+                <a href = "/public/indexCarol/index.html"><img class="sidebar-icon" src="/img/botaohome.png" alt="Botão Home Page"></a>
+                <a href="/public/notificacaoMauro/notificacao.html" > <img class="sidebar-icon"  src="/img/botaonotificacao.png" alt="Botão Home Page"></a>
+                <img class="sidebar-icon" src="/img/botaoconfiguser.png" alt="Botão de Configuração das Notificações">
+                <img class="sidebar-icon" src="/img/botaocalendario.png" alt="Botão Calendário">
+                <img class="sidebar-icon" src="/img/botaosair.png" alt="Botão Sair">
+            </aside>
+
+            <!-- Conteúdo Principal - COMEÇA AQUI-->
+            <main class="col-xl-8 p-4">
+                <header class="d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h1 class="fw-semibold">Meu Perfil</h1>
+                        <p class="text-muted data-atual">Sexta-Feira, 04 de Out. 2024</p>
+                    </div>
+                    <div>
+                        <a href="/public/gerenciaVacFelipe/gerenciar.html" class="text-end fw-semibold gerenciarVacinas">Gerenciar Vacinas</a>
+                        <a href="/public/cadastroVacMauro/cadastroVac.html"><button  class="btn btnaddVacinas fw-semibold">Add+ Vacina</button></a>
+                    </div>
+                </header>
+
+                <section
+                    class="bg-info px-5 text-white d-flex justify-content-between align-items-center mb-4">
+                    <div>
+                        <h2 class="fw-semibold text-center boasVindastexto">Bem-Vindo, </h2>
+                        <h2 class="fw-semibold text-center" id="nomeUser-principal">[Nome da Pessoa]</h2>
+                        <p class="text-center fw-semibold perguntaBV">Como anda seu calendário vacinal?</p>
+                    </div>
+                    <!-- Avatar do Boas-Vindas -->
+                    <img src="/img/avatar1.png" alt="Avatar do Perfil" class="rounded-circle avatar-boasVindas">
+                </section>
+
+                <section class="row text-center mb-4">
+                    <div class="col-xl-1"></div>
+                    <div class="col-xl-2">
+                        <div class="card p-3 shadow-sm h-100">
+                            <img src="/img/cardvacinatomadas.png" class="card-img-top cardvacinasMain mt-3" alt="...">
+                            <p class="text-muted fw-semibold tituloCardVacinal pt-2">Vacinas Tomadas</p>
+                            <h4 class="fw-bold mb-5 subtituloCardVacinal">23</h4>
+                        </div>
+                    </div>
+                    <div class="col-xl-2">
+                        <div class="card p-3 shadow-sm h-100">
+                            <img src="/img/cardproxdoses.png" class="card-img-top cardvacinasMain mt-3" alt="...">
+                            <p class="text-muted fw-semibold tituloCardVacinal pt-2">Próximas Doses</p>
+                            <h4 class="fw-bold mb-5 subtituloCardVacinal">4</h4>
+                        </div>
+                    </div>
+                    <div class="col-xl-2">
+                        <div class="card p-3 shadow-sm h-100">
+                            <img src="/img/cardsugeridas.png" class="card-img-top cardvacinasMain mt-3" alt="...">
+                            <p class="text-muted fw-semibold tituloCardVacinal pt-2">Sugeridas</p>
+                            <h4 class="fw-bold mb-5 subtituloCardVacinal">16</h4>
+                        </div>
+                    </div>
+                    <div class="col-xl-2">
+                        <div class="card p-3 shadow-sm h-100">
+                            <img src="/img/cardlembretes.png" class="card-img-top cardvacinasMain mt-3" alt="...">
+                            <p class="text-muted  fw-semibold tituloCardVacinal pt-2">Lembretes Agendados</p>
+                            <h4 class="fw-bold mb-5 subtituloCardVacinal">5</h4>
+                        </div>
+                    </div>
+                    <div class="col-xl-2">
+                        <div class="card p-3 shadow-sm h-100">
+                            <img src="/img/cardcep.png" class="card-img-top cardvacinasMain mt-3" alt="...">
+                            <p class="text-muted fw-semibold tituloCardVacinal pt-2">Localizar Unidades de Saúde em
+                                outro CEP </p>
+                        </div>
+                    </div>
+                </section>
+                <!-- Calendário Vacinal | Deve ser Ajustado pelo Rafael, fiz uma base -->
+                <section class="bg-white p-4 rounded shadow-sm">
+                    <h3 class="text-center tituloCalendarioVacinal fw-semibold">Calendário Vacinal</h3>
+                    <p class="text-center mesAnoCalendario">Outubro 2024</p>
+                    <div class="d-flex justify-content-between px-4">
+                        <div class="text-center">
+                            <p>Ex. a serem formatados:</p>
+                            <p>Seg 04</p>
+                            <span class="badge bg-success p-2">Vacina tomada: Febre Amarela</span>
+                        </div>
+                        <div class="text-center">
+                            <p>Qua 06</p>
+                            <span class="badge bg-primary p-2">Próxima Dose: COVID-19</span>
+                        </div>
+                        <div class="text-center">
+                            <p>Sex 08</p>
+                            <span class="badge bg-warning text-dark p-2">Sugerida: Campanha contra Gripe</span>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <!-- Perfis Sidebar -->
+            <aside class="col-xl-3 bg-light p-4 profile-sidebar">
+                <div class="mb-4">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <h3 class=" col-xl-3 text-start fw-bold text-start p-4 tituloSidebar-Perfil">Perfil</h3>
+                            <div class="col-xl-8"></div>
+                            <div class="col-xl-1">
+                                <img class="botaonotificacaoSidebar pt-3" src="/img/sinonotifica.png" alt="Botão Sair">
+                            </div>
+                        </div>
+                    </div>
+                    <img src="/img/avatar1Sidebar.png" alt="Nome do Usuário - Sidebar" class="avatarSidebar mb-2">
+                    <h3 class="text-center fw-bold nomeUser-Sidebar">[Nome do Usuário]</h3>
+                </div>
+
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-xl-6">
+                            <h4 class="mb-4 pt-5 fw-semibold tituloPerfisVinc">Perfis Vinculados</h4>
+                        </div>
+                        <div class="col-xl-3"></div>
+                        <div class="col-xl-3 mb-4 pt-5">
+                            <a href="/public/loginFelipe/login.html" class="addConta-Sidebar fw-semibold">Add+ Conta</a>
+                        </div>
+                    </div>
+                </div>
+                <ul class="list-unstyled" id="gerenciarUsuarios">
+                    <li class="d-flex align-items-center justify-content-between mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="/img/avatar2.png" alt="Avatar Perfil Secundário 01"
+                                class="rounded-circle me-2 avatarPerfisSecundarios">
+                            <div>
+                                <p class="mb-0 fw-bold">Plipi Turipi</p>
+                                <small class="text-muted">Grupo Vacinal: Infantil - 9 anos</small>
+                            </div>
+                        </div>
+                        <i class="bi bi-x-circle-fill text-danger"></i>
+                    </li>
+                    <li class="d-flex align-items-center justify-content-between mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="/img/avatar3.png" alt="Avatar Perfil Secundário 02"
+                                class="rounded-circle me-2 avatarPerfisSecundarios">
+                            <div>
+                                <p class="mb-0 fw-bold">Lisa Lopes</p>
+                                <small class="text-muted">Grupo Vacinal: Idosos - 65 anos</small>
+                            </div>
+                        </div>
+                        <i class="bi bi-x-circle-fill text-danger"></i>
+                    </li>
+                    <li class="d-flex align-items-center justify-content-between mb-3">
+                        <div class="d-flex align-items-center">
+                            <img src="/img/avatar4.png" alt="Avatar Perfil Secundário 03"
+                                class="rounded-circle me-2 avatarPerfisSecundarios">
+                            <div>
+                                <p class="mb-0 fw-bold">Elton Junior Filho da Silva</p>
+                                <small class="text-muted">Grupo Vacinal: Bebês - 4 meses</small>
+                            </div>
+                        </div>
+                        <i class="bi bi-x-circle-fill text-danger"></i>
+                    </li>
+                </ul>
+                <div class="d-grid gap-2 col-xl-6 mx-auto">
+                    <button class="btn botaoGerenciarContas fw-semibold" type="button">Gerenciar Contas</button>
+                </div>
+        </div>
+        </aside>
+    </div>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

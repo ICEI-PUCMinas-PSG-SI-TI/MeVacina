@@ -1,0 +1,187 @@
+/* Fontes Usadas */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+
+/* Fundo Gradiente */
+body {
+    background: #eff1fe;
+    font-family: "Montserrat", sans-serif;
+    color: #333;
+    border: 50px solid #a8c7f5;
+    border-radius: 100px;
+}
+
+
+/* Sidebar e Ícones */
+.bg-sidebar {
+    background-color: #5694e9;
+    height: 100%;
+    border-radius: 60px;
+    max-width: 60%;
+}
+
+.botaosidebar{
+ width: 35%;
+ margin: 15%;
+}
+
+.btnhome {
+    margin-top: 20%;
+}
+
+.btncalendario {
+    width: 34%;
+}
+
+.sidebar-icon {
+    background-color: #FFF;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 1.5rem;
+}
+
+/* Seção de Boas-Vindas */
+.gerenciarVacinas{
+    text-decoration: none;
+    margin: 30px;
+    font-size: 14pt;
+    color: #5694e9;
+}
+
+.btnaddVacinas{
+    background-color: #5694e9;
+    border-radius: 12px;
+    color: #eff1fe;
+    font-size: 20px;
+}
+
+.bg-info {
+    background-color: #5694e9 !important;
+    border-radius: 35px;
+}
+
+.bg-info h2{
+    display: inline;
+    font-size: 35pt;
+    
+}
+
+.boasVindastexto {
+    padding-left: 100px;
+}
+
+
+#nomeUser-principal{
+    color: #cee4ff;
+}
+
+.avatar-boasVindas{
+    width: 20%;
+}
+
+.perguntaBV {
+    color: #cfd1e3;
+    font-size: 20pt;
+    padding-left: 70px;
+}
+
+/* Cards das Vacinas com os contadores */
+.cardvacinasMain{
+    width: 35%;
+    margin: 0 auto;
+    padding-bottom: 15px;
+}
+
+.card {
+    background-color: #FFF;
+    border: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+.tituloCardVacinal{
+    font-size: 13pt;
+    color: #676565;
+}
+
+.subtituloCardVacinal{
+    color: #e45959;
+    font-size: 28pt;
+}
+
+/* Calendário Vacinal */
+.bg-success, .bg-primary, .bg-warning {
+    border-radius: 10px;
+}
+
+.tituloCalendarioVacinal{
+    color: #fc4a4a;
+    font-size: 28px;
+}
+
+.mesAnoCalendario{
+    font-size: 28px;
+    color: #454545c0;
+}
+
+/* Sidebar de Perfil */
+.avatarSidebar{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+}
+
+.botaonotificacaoSidebar{
+    width: 190%;
+    padding-right: 10px;
+}
+
+.nomeUser-Sidebar{
+    font-size: 36px;
+    color: #000;
+    padding-top: 10px;
+}
+
+.tituloSidebar-Perfil {
+    display: inline;
+}
+
+.addConta-Sidebar{
+    text-decoration: none;
+    font-size: 18px;
+    color: #5397eb;
+    padding-left: 5px;
+}
+
+.tituloPerfisVinc{
+    color: #000000;
+}
+
+.avatarPerfisSecundarios {
+    width: 14%; 
+    height: 14%;
+}
+.botaoGerenciarContas{
+    background-color: #5694e9;
+    color: #E1EFFF;
+    height: 110%;
+    width: 80%;
+    margin: 0 auto;
+    border-radius: 15px;
+    font-size: 18px;
+}
+
+.profile-sidebar {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.list-unstyled i.bi-x-circle-fill {
+    cursor: pointer;
+    font-size: 1.2rem;
+}
